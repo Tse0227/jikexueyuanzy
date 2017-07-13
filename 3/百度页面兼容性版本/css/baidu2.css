@@ -1,0 +1,541 @@
+body {
+    font: 12px arial;
+ behavior:url(csshover.htc);
+}
+
+* html {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+p,
+form,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+article,
+aside,
+dialog,
+footer,
+header,
+section,
+footer,
+nav,
+figure,
+menu {
+    display: block
+}
+
+.allblock {
+    min-width: 810px;
+    height: 100%;
+    min-height: 600px;
+    position: relative;
+}
+
+.headblock {
+    text-align: center;
+    margin: 0 auto;
+    height: 100%;
+}
+
+
+/*头部导航*/
+
+.nav {
+    height: 24px;
+    overflow: hidden;
+    padding-top: 19px;
+}
+
+.nav ul {
+    height: 24px;
+    list-style: none;
+    font-size: 15px;
+    float: right;
+}
+
+.nav ul li {
+    float: left;
+    line-height: 24px;
+    width: 48px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.nav ul li:nth-child(3) {
+    width: 64px;
+}
+
+
+/*兼容IE7 8*/
+
+.nav ul>li:first-child +li+li {
+    width: 64px;
+}
+
+.nav .lchild3 {
+    width: 64px;
+}
+
+.nav ul li:nth-child(7) {
+    font-weight: normal;
+}
+
+
+/*兼容IE7 8*/
+
+.nav ul>li:first-child +li+li+li+li+li+li {
+    font-weight: normal;
+}
+
+.nav .lchild7 {
+    font-weight: normal;
+}
+
+ .nav .lchild8 {
+    font-weight: normal;
+}
+
+.nav ul li:nth-child(8) {
+    font-weight: normal;
+}
+
+.nav ul>li:first-child +li+li+li+li+li+li+li {
+    font-weight: normal;
+}
+
+.nav ul li:last-child {
+    width: 60px;
+    background: #38f;
+    margin-right: 13px;
+    margin-left: 12px;
+}
+
+.nav ul>li:first-child +li+li+li+li+li+li+li+li {
+    width: 60px;
+    background: #38f;
+    margin-right: 13px;
+    margin-left: 12px;
+}
+
+.nav .lchild9 {
+    width: 60px;
+    background: #38f;
+    margin-right: 13px;
+    margin-left: 12px;
+}
+
+.nav ul li:last-child a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: normal;
+    border-bottom: 1px solid #38f;
+}
+
+.nav ul>li:first-child +li+li+li+li+li+li+li+li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: normal;
+    border-bottom: 1px solid #38f;
+}
+
+.nav .lchild9 a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: normal;
+    border-bottom: 1px solid #38f;
+    display: block;
+}
+
+.nav ul li a {
+    color: #333;
+    font-size: 13px;
+}
+
+.nav ul li a:hover {
+    color: #00C;
+}
+
+.nav ul li:nth-child(8):hover .menu {
+    display: block;
+
+}
+.nav .lchild8 :hover .menu{
+    display: block;
+
+}
+
+
+.nav ul>li:first-child +li+li+li+li+li+li+li:hover .menu {
+    display: block
+}
+
+.nav ul li:nth-child(9):hover .product {
+    display: block
+}
+
+.nav ul>li:first-child +li+li+li+li+li+li+li+li:hover .product {
+    display: block
+}
+
+.nav .lchild9:hover .product {
+    display: block;
+}
+
+
+/*头部导航*/
+
+
+/*logo和输入框*/
+
+.form_logo {
+    position: relative;
+    top: 28px;
+    margin-bottom: 290px;
+}
+
+.formpart {
+    margin-top: 17px;
+    font-size: 0;
+}
+
+.btnimg {
+    width: 18px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    background: #fff url(../image/camera_new_679c15cc.png)0 0px no-repeat;
+    right: 11px;
+    margin-top: -8px;
+}
+
+.btnimg:hover {
+    background-position: 0 -20px
+}
+
+.textinput {
+    width: 539px;
+    border: 1px solid #b6b6b6;
+   display:inline-block; _zoom:1;*display:inline;
+    vertical-align: top;
+    height: 34px;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+    border-right: none
+}
+
+.sinfocus {
+    border-color: #4791ff transparent #4791ff #4791ff !important;
+}
+
+.textinput:hover {
+    border: 1px solid #999;
+    border-right: none
+}
+
+.sinput {
+    width: 500px;
+    height: 22px;
+    margin: 6px 0 0 7px;
+    border: 0;
+    outline: none;
+    padding: 0;
+    font: 16px/18px arial;
+    background: transparent;
+}
+
+.btnsumbit {
+   display:inline-block; _zoom:1;*display:inline;
+    width: auto;
+    height: auto;
+}
+
+.sumbtn {
+    background: #3385ff;
+    width: 100px;
+    height: 36px;
+    border: none;
+    padding: 0;
+    border-bottom: 1px solid #2d78f4;
+    _border:1px solid #ccc;
+    color: #fff;
+    font-size: 15px;
+    outline: medium;
+}
+
+.sumbtn:hover {
+    box-shadow: 1px 1px 1px #ccc;
+    background: #317ef3;
+}
+
+
+/*logo和输入框*/
+
+
+/*footer*/
+
+.footer {
+    position: absolute;
+    bottom: 20px;
+    height: 100px;
+    width: 640px;
+    left: 50%;
+    margin-left: -320px
+
+}
+
+.codepart {
+    /*IE67 兼容display:inline-block*/
+   display:inline-block; _zoom:1;*display:inline;
+}
+
+.codepart p span {
+    letter-spacing: 1px;
+}
+
+.code1 {
+    float: left;
+}
+
+.code2 {
+    float: left;
+    margin-left: 33px
+}
+
+.codeimg1 {
+    background: url(../image/zbios_62c636fe.png) 0 0 no-repeat;
+    width: 60px;
+    height: 60px;
+    float: left;
+}
+
+.codeimg2 {
+    background: url(../image/zbios_62c636fe.png) 0 0 no-repeat;
+    width: 60px;
+    height: 60px;
+    float: left;
+}
+
+.codetext {
+    /*IE67 兼容display:inline-block*/
+    display:inline-block; 
+   _zoom:1;
+   *display:inline;
+    line-height: 23px;
+    margin: 8px 0 0 10px;
+}
+
+.codetext p b {
+    color: #666;
+    font-weight: bold;
+}
+
+.codetext p {
+    color: #999;
+}
+
+.aboutpart {
+    /*IE67 兼容display:inline-block*/
+   display:inline-block; 
+   _zoom:1;
+   *display:inline;
+    position: relative;
+    top: -3px;
+    text-align: left;
+    margin-left: 33px;
+    line-height: 22px;
+    color: #999;
+}
+
+.aboutpart a {
+    color: #999;
+    margin-left: 55px
+}
+
+.aboutpart .a_set {
+    margin-left: 0;
+}
+
+.icp_logo {
+    background: url(../image/copy_rignt_24.png) 0 0 no-repeat;
+    width: 14px;
+    height: 17px;
+    overflow: hidden;
+    /*IE67 兼容display:inline-block*/
+     display:inline-block; 
+   _zoom:1;
+   *display:inline;
+    position: relative;
+    top: 3px;
+}
+
+.ijg_logo {
+    background: url(../image/icon-police.png) 0 0 no-repeat;
+    width: 14px;
+    height: 17px;
+    overflow: hidden;
+    /*IE67 兼容display:inline-block*/
+   display:inline-block; 
+   _zoom:1;
+   *display:inline;
+    position: relative;
+    top: 3px;
+    margin-right: 5px
+}
+
+
+/*footer*/
+
+
+/*menu按钮*/
+
+.menu {
+    margin-top: 5px;
+    width: 70px;
+    position: absolute;
+    right: 71px;
+    display: none;
+    z-index: 10000;
+}
+
+.menu .uls:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border: 5px solid #fafafa;
+    border-color: transparent transparent #ccc transparent;
+    position: absolute;
+    top: -11px;
+    left: 28px;
+}
+
+.menu .uls:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border: 5px solid #fafafa;
+    border-color: transparent transparent #fff transparent;
+    position: absolute;
+    top: -10px;
+    left: 28px;
+}
+
+.menu .uls {
+    width: 70px;
+    border: solid 1px #ccc;
+    position: relative;
+    border-radius: 2px;
+    text-align: center;
+    line-height: 25px
+}
+
+.menu .uls a:first-child {
+    margin-top: 3px
+}
+
+.menu .uls a {
+    color: #333;
+    font-size: 12px;
+    display: block;
+    text-decoration: none
+}
+
+.menu>.uls a:hover {
+    background: #38f;
+    font-color: #fff;
+}
+
+
+/*更多产品*/
+
+.product {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    display: none;
+    z-index: 100;
+}
+
+.product .productuls {
+    width: 85px;
+    border: solid 1px #ccc;
+    position: relative;
+    border-radius: 2px;
+    text-align: center;
+    border-top-width: 0;
+    background: #f9f9f9;
+}
+
+.product>.productuls a {
+    font-size: 12px !important;
+    display: block !important;
+    width: 66px !important;
+    height: 76px !important;
+    margin: 0 auto;
+    border-bottom: #f0f0f0 1px solid !important;
+    color: #666 !important;
+    text-decoration: none !important;
+    overflow: hidden;
+    text-align: center;
+}
+
+.product .productuls a.firsta {
+    height: 43px!important;
+    line-height: 43px;
+    padding-top: 9px;
+}
+
+.product .productuls a.lasta {
+    padding-top: 10px;
+    color: #666;
+    text-decoration: underline;
+}
+
+.product .productuls span {
+    width: 36px;
+    height: 36px;
+    display: block;
+    cursor: pointer;
+    background: url(../image/bdbri_icons_2e35e84b.png) 0 0 no-repeat;
+    margin: 10px auto 5px !important;
+}
+
+.product .productuls span.pro1 {
+    background-position: -72px 0
+}
+
+.product .productuls span.pro2 {
+    background-position: -112px 0
+}
+
+.product .productuls span.pro3 {
+    background-position: -36px 0
+}
+
+.product .productuls span.pro4 {
+    background-position: -148px 0
+}
+
+.product .productuls span.pro5 {
+    background-position: -184px 0
+}
+
+.product .productuls span.pro6 {
+    background-position: -220px 0
+}

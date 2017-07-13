@@ -1,0 +1,90 @@
+
+* {
+    padding: 0;
+    margin: 0
+}
+/*外层盒子的样式*/
+
+.container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    transform-style: preserve-3d;
+    transform: rotateX(-30deg) rotateY(45deg) rotateZ(-117deg);
+    top: 200px;
+    left: -100px;
+    /*动画效果使用*/
+    -webkit-animation: animation 5s ease-in infinite;
+    -webkit-transform-style: preserve-3d;
+    -webkit-perspective-origin: 80px 80px;
+}
+
+
+/*动画效果*/
+
+@-webkit-keyframes animation {
+    16% {
+        -webkit-transform: rotateY(-90deg)
+    }
+    33% {
+        -webkit-transform: rotateY(-90deg) rotateZ(135deg)
+    }
+    50% {
+        -webkit-transform: rotateY(225deg)rotateZ(135deg)
+    }
+    66% {
+        -webkit-transform: rotateY(135deg)rotateZ(135deg)
+    }
+    90% {
+        -webkit-transform: rotateY(135deg)
+    }
+}
+
+
+/*设置6个面div的公共样式*/
+
+.container div {
+    box-sizing: border-box;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #191919;
+    position: absolute;
+    opacity: 0.5
+}
+
+.one {
+    background: #FFCC66;
+    /*z轴平移*/
+    transform: translateZ(100px);
+}
+
+.two {
+    background: #CCFF66;
+       /*z轴平移*/
+    transform: translateZ(-100px);
+}
+
+.three {
+    background: #66CCFF;
+       /*Y轴平移 X轴旋转*/
+    transform: translateY(-100px) rotateX(-90deg);
+}
+
+.four {
+    background: #0080ff;
+     /*Y轴平移 X轴旋转*/
+    transform: translateY(100px) rotateX(90deg);
+}
+
+.five {
+    background: #800080;
+     /*X轴平移 Y轴旋转*/
+    transform: translateX(100px)  rotateY(90deg);
+}
+
+.six {
+    background: #FF6666;
+     /*X轴平移 Y轴旋转*/
+    transform: translateX(-100px)  rotateY(90deg);
+}

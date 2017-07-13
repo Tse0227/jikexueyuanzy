@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>弹性盒模型</title>
+    <style>
+    /*弹性盒模型的水平分栏*/
+    
+    .con_hor {
+        display: -webkit-flex;
+        width: 300px;
+        background-color: red;
+        height: 100px
+    }
+    
+    .first {
+        height: 100px;
+        background-color: orange;
+        -webkit-flex: 1;
+        -webkit-order: 2;
+    }
+    
+    .second {
+        height: 100px;
+        background-color: aquamarine;
+        -webkit-flex: 1;
+    }
+    
+    .three {
+        height: 100px;
+        background-color: #E3FF7F;
+        -webkit-flex: 1;
+        -webkit-order: 3;
+    }
+    /*弹性盒模型的垂直分栏*/
+    
+    .con_ver {
+        /*新版flex*/
+        display: -webkit-flex;
+        -webkit-flex-direction: column;
+        /*旧版box*/
+        /* display: -webkit-box;
+        -webkit-box-orient: vertical;*/
+        width: 300px;
+        background-color: red;
+        height: 500px;
+    }
+    .con_ver_one {
+        height: 100px;
+        background-color: orange;
+        /*新版flex*/
+        -webkit-flex: 1;
+        -webkit-order: 2;
+        /*旧版box*/
+        /*-webkit-box-flex: 1;
+        -webkit-box-order: 1;*/
+    }
+    
+    .con_ver_two {
+        height: 100px;
+        background-color: aquamarine;
+        /*新版flex*/
+        -webkit-flex: 1;
+        -webkit-order: 2;
+        /*旧版box*/
+        /*-webkit-box-flex: 1;
+        -webkit-box-order: 3;*/
+    }
+    
+    .con_ver_three {
+        height: 100px;
+        background-color: #E3FF7F;
+        /*新版flex*/
+        -webkit-flex: 1;
+        -webkit-order: 2;
+        /*旧版box*/
+        /*-webkit-box-flex: 1;
+        -webkit-box-order: 2;*/
+    }
+    /*弹性盒模型的cloumn分栏*/
+    
+    .con_cloumn {
+        display: -webkit-box-flex;
+        width: 200px;
+        height: 200px;
+        background-color: orange;
+        -webkit-column-count: 3;
+        -webkit-column-rule-style: dashed;
+        -webkit-column-gap: 20px:
+    }
+    
+    .con_cloumn div {
+        height: 200px
+    }
+    
+    .cloumn_a {
+        background-color: aquamarine
+    }
+    
+    .cloumn_b {
+        background-color: aqua
+    }
+    
+    .cloumn_c {
+        background-color: chartreuse
+    }
+    /*弹性盒模型的垂直居中和水平居中*/
+    
+    .center {
+        display: -webkit-box;
+        -webkit-box-pack: center;
+        -webkit-box-align: center;
+        height: 300px;
+        width: 300px;
+        background-color: orange
+    }
+    </style>
+</head>
+
+<body>
+    <!-- 弹性盒模型的水平分栏 -->
+    <p>水平分栏</p>
+    <div class="con_hor">
+        <div class="first">1</div>
+        <div class="second">2</div>
+        <div class="three">3</div>
+    </div>
+    <hr/>
+    <!-- 弹性盒模型的垂直分栏 -->
+    <div class="con_ver">
+        <div class="con_ver_one">1</div>
+        <div class="con_ver_two">2</div>
+        <div class="con_ver_three">3</div>
+    </div>
+    <hr/>
+    <!-- 弹性盒模型的cloumn分栏 -->
+    <div class="con_cloumn">
+        <div class="cloumn_a">1</div>
+        <div class="cloumn_b">2</div>
+        <div class="cloumn_c">3</div>
+    </div>
+    <hr/>
+    <!-- 弹性盒模型的垂直居中和水平居中 -->
+    <div class="container">
+        <div class="center">
+            <img src="image/974c7585b36a44efa034fdd7c6b9619d_source.jpg" width="150px" alt="">
+        </div>
+    </div>
+</body>
+
+</html>

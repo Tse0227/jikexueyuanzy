@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>正常盒子与怪异盒子</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+<!-- 正常盒子 -->
+    <div class="xiehe">
+        <div class="xiezi">鞋子</div>
+    </div>
+<!-- 正常盒子end -->    
+    <hr/>
+<!-- 怪异盒子 -->    
+    <div class="xiehe1">
+        <div class="xiezi1">怪异鞋子</div>
+    </div>
+<!-- 怪异盒子end -->    
+</body>
+
+</html>

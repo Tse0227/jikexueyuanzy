@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0
+}
+/*正常鞋盒---padding影响鞋盒大小*/
+.xiehe {
+	margin:0 auto;
+    margin-top: 100px;
+    padding: 10px;
+    width: 300px;
+    height: 300px;
+    background-color: aqua;
+    border: 5px dashed red
+}
+
+.xiezi {
+    width: 300px;
+    height: 300px;
+    background-color: orange
+}
+
+ /*怪异鞋盒---padding不影响鞋盒大小*/
+.xiehe1 {
+    padding: 10px;
+    width: 330px;
+    height: 330px;
+    margin:0 auto;
+    margin-top: 100px;
+    background-color: aqua;
+    border: 5px dashed red;
+    box-sizing: border-box;
+}
+
+.xiezi1 {
+    width: 300px;
+    height: 300px;
+    background-color: orange
+}

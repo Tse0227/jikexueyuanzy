@@ -1,0 +1,253 @@
+* {
+    padding: 0;
+    margin: 0
+}
+
+
+/*外层盒子的样式*/
+
+.container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    top: 150px;
+    left: -100px;
+    /*动画效果使用*/
+    -webkit-animation: animation 5s ease-in infinite;
+    -webkit-transform-style: preserve-3d;
+    -webkit-perspective-origin: 100px 100px;
+    -webkit-transform: rotateX(-30deg) rotateY(45deg) rotateZ(-117deg);
+
+    -moz-animation: animation 5s ease-in infinite;
+    -moz-transform-style: preserve-3d;
+    -moz-perspective-origin: 100px 100px;
+    -moz-transform: rotateX(-30deg) rotateY(45deg) rotateZ(-117deg);
+
+    -o-animation: animation 5s ease-in infinite;
+    -o-transform-style: preserve-3d;
+    -o-perspective-origin: 100px 100px;
+    -o-transform: rotateX(-30deg) rotateY(45deg) rotateZ(-117deg);
+    
+    -ms-animation: animation 5s ease-in infinite;
+    -ms-transform-style: preserve-3d;
+    -ms-perspective-origin: 100px 100px;
+    -ms-transform: rotateX(-30deg) rotateY(45deg) rotateZ(-117deg);
+
+    animation: animation 5s ease-in infinite;
+    transform-style: preserve-3d;
+    perspective-origin: 100px 100px;
+    transform: rotateX(-30deg) rotateY(45deg) rotateZ(-117deg);
+}
+
+
+/*动画效果*/
+
+@-webkit-keyframes animation {
+    16% {
+        -webkit-transform: rotateY(-90deg)
+    }
+    33% {
+        -webkit-transform: rotateY(-90deg) rotateZ(135deg)
+    }
+    50% {
+        -webkit-transform: rotateY(225deg)rotateZ(135deg)
+    }
+    66% {
+        -webkit-transform: rotateY(135deg)rotateZ(135deg)
+    }
+    90% {
+        -webkit-transform: rotateY(135deg)
+    }
+}
+
+@-moz-keyframes animation {
+    16% {
+        -moz-transform: rotateY(-90deg)
+    }
+    33% {
+        -moz-transform: rotateY(-90deg) rotateZ(135deg)
+    }
+    50% {
+        -moz-transform: rotateY(225deg)rotateZ(135deg)
+    }
+    66% {
+        -moz-transform: rotateY(135deg)rotateZ(135deg)
+    }
+    90% {
+        -moz-transform: rotateY(135deg)
+    }
+}
+
+@-o-keyframes animation {
+    16% {
+        -o-transform: rotateY(-90deg)
+    }
+    33% {
+        -o-transform: rotateY(-90deg) rotateZ(135deg)
+    }
+    50% {
+        -o-transform: rotateY(225deg)rotateZ(135deg)
+    }
+    66% {
+        -o-transform: rotateY(135deg)rotateZ(135deg)
+    }
+    90% {
+        -o-transform: rotateY(135deg)
+    }
+}
+
+@-ms-keyframes animation {
+    16% {
+        -ms-transform: rotateY(-90deg)
+    }
+    33% {
+        -ms-transform: rotateY(-90deg) rotateZ(135deg)
+    }
+    50% {
+        -ms-transform: rotateY(225deg)rotateZ(135deg)
+    }
+    66% {
+        -ms-transform: rotateY(135deg)rotateZ(135deg)
+    }
+    90% {
+        -ms-transform: rotateY(135deg)
+    }
+}
+
+@keyframes animation {
+    16% {
+        transform: rotateY(-90deg)
+    }
+    33% {
+        transform: rotateY(-90deg) rotateZ(135deg)
+    }
+    50% {
+        transform: rotateY(225deg)rotateZ(135deg)
+    }
+    66% {
+        transform: rotateY(135deg)rotateZ(135deg)
+    }
+    90% {
+        transform: rotateY(135deg)
+    }
+}
+
+/*设置6个面div的公共样式*/
+
+.container>div {
+    box-sizing: border-box;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    opacity: 0.5;
+    /*IE透明度*/
+    filter:progid:DXImageTransform.Microsoft.Alpha(opactiy=50);
+
+}
+
+div {
+    box-sizing: border-box;
+}
+
+.one {
+    transform: translateZ(150px);
+    -webkit-transform: translateZ(150px);
+    -moz-transform: translateZ(150px);
+    -o-transform: translateZ(150px);
+    -ms-transform: translateZ(150px);
+}
+
+.one>div {
+    height: 100px;
+    width: 100px;
+    border: 1px solid #ccc;
+    position: relative;
+    float: left;
+    background: #ff0000
+}
+
+.two {
+    transform: translateZ(-150px);
+    -webkit-transform: translateZ(-150px);
+    -moz-transform: translateZ(-150px);
+    -o-transform: translateZ(-150px);
+    -ms-transform: translateZ(-150px);
+}
+
+.two>div {
+    height: 100px;
+    width: 100px;
+    border: 1px solid #ccc;
+    position: relative;
+    float: left;
+    background: #0000ff
+}
+
+.three {
+    transform: translateY(-150px) translateZ(0px) rotateX(-90deg);
+    -webkit-transform: translateY(-150px) translateZ(0px) rotateX(-90deg);
+    -moz-transform: translateY(-150px) translateZ(0px) rotateX(-90deg);
+    -o-transform: translateY(-150px) translateZ(0px) rotateX(-90deg);
+    -ms-transform: translateY(-150px) translateZ(0px) rotateX(-90deg);
+}
+
+.three>div {
+    height: 100px;
+    width: 100px;
+    border: 1px solid #ccc;
+    position: relative;
+    float: left;
+    background: #00ff00
+}
+
+.four {
+    transform: translateY(150px) translateZ(0px) rotateX(90deg);
+    -webkit-transform: translateY(150px) translateZ(0px) rotateX(90deg);
+    -moz-transform: translateY(150px) translateZ(0px) rotateX(90deg);
+    -o-transform: translateY(150px) translateZ(0px) rotateX(90deg);
+    -ms-transform: translateY(150px) translateZ(0px) rotateX(90deg);
+}
+
+.four>div {
+    height: 100px;
+    width: 100px;
+    border: 1px solid #ccc;
+    position: relative;
+    float: left;
+    background: #ffff00
+}
+
+.five {
+    transform: translateX(150px) translateZ(0px) rotateY(90deg);
+    -webkit-transform: translateX(150px) translateZ(0px) rotateY(90deg);
+    -moz-transform: translateX(150px) translateZ(0px) rotateY(90deg);
+    -o-transform: translateX(150px) translateZ(0px) rotateY(90deg);
+    -ms-transform: translateX(150px) translateZ(0px) rotateY(90deg);
+}
+
+.five>div {
+    height: 100px;
+    width: 100px;
+    border: 1px solid #ccc;
+    position: relative;
+    float: left;
+    background: #ff7f00
+}
+
+.six {
+    transform: translateX(-150px) translateZ(0px) rotateY(90deg);
+    -webkit-transform: translateX(-150px) translateZ(0px) rotateY(90deg);
+    -moz-transform: translateX(-150px) translateZ(0px) rotateY(90deg);
+    -o-transform: translateX(-150px) translateZ(0px) rotateY(90deg);
+    -ms-transform: translateX(-150px) translateZ(0px) rotateY(90deg);
+}
+
+.six>div {
+    height: 100px;
+    width: 100px;
+    border: 1px solid #ccc;
+    position: relative;
+    float: left;
+    background: #000000
+}

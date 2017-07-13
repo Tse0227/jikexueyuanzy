@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../css/Css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../css/Css/bootstrap-responsive.css" />
+    <link rel="stylesheet" type="text/css" href="../css/Css/style.css" />
+    <script type="text/javascript" src="../js/Js/jquery.js"></script>
+    <script type="text/javascript" src="../js/Js/bootstrap.js"></script>
+    <script type="text/javascript" src="../js/Js/ckform.js"></script>
+    <script type="text/javascript" src="../js/Js/common.js"></script>
+    <style type="text/css">
+    body {
+        padding-bottom: 40px;
+    }
+    
+    .sidebar-nav {
+        padding: 9px 0;
+    }
+    
+    @media (max-width: 980px) {
+        /* Enable use of floated navbar text */
+        .navbar-text.pull-right {
+            float: none;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+    }
+    </style>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $.ajax({
+            url: 'index.php',
+            type: "post",
+            data: "action=select",
+            dataType: 'json',
+            success: function(data) {
+                console.log(data.result[0].newsid);
+                for (var i = 0; i <= data.result.length - 1; i++) {
+                    var tr = $("<tr>").appendTo($(".table"));
+                    var newid = $("<td>" + data.result[i].newsid + "</td>").appendTo(tr);
+                    var newimg = $("<td>../img.jpg</td>").appendTo(tr);
+                    var newtitle = $("<td>" + data.result[i].newtitle + "</td>").appendTo(tr);
+                    var tdlast = $("<td>").appendTo(tr);
+                    var btnedit = $(' <button type="button" class="btn btn-info upadatenew" >编辑</button>').appendTo(tdlast);
+                    var btndel = $(' <butto type="button" class="btn btn-danger delnews" >删除</button>').appendTo(tdlast);
+                }
+
+                $(".upadatenew").on("click", function() {
+                    /* Act on the event */
+                    var neid = $(this).parent().parent().find("td").eq(0).html();
+                    window.location.href = "edit.html?id=" + neid;
+
+                });
+
+                $(".delnews").on("click", function() {
+                    /* Act on the event */
+                    var neid = $(this).parent().parent().find("td").eq(0).html();
+                    var URL = "index.php";
+                    var trs = $(this).parent().parent();
+                    $.ajax({
+                        type: "POST",
+                        url: URL,
+                        data: "action=del&newsid=" + neid,
+                        success: function(msg) {
+                            if (msg == 1) {
+                                alert("删除成功!");
+                                trs.remove();
+                            } else {
+                                alert("操作失败!");
+                                return false;
+                            }
+                        }
+                    });
+
+                })
+            }
+        });
+    });
+    </script>
+</head>
+
+<body>
+    <form class="form-inline definewidth m20" action="index.html" method="get">
+        标题名称：
+        <input type="text" name="menuname" id="menuname" class="abc input-default" placeholder="" value="">&nbsp;&nbsp;
+        <button type="button" class="btn btn-success" id="addnew">新增菜单</button><a type="button" class="btn btn-info" href="../m_baidu.html">返回新闻首页</a>
+    </form>
+    <table class="table table-bordered table-hover definewidth m10">
+        <thead>
+            <tr>
+                <th>新闻id</th>
+                <th>新闻图片</th>
+                <th>新闻标题</th>
+                <th>管理操作</th>
+            </tr>
+        </thead>
+    </table>
+</body>
+
+</html>
+<script>
+$(function() {
+
+
+    $('#addnew').click(function() {
+
+        window.location.href = "add.html";
+    });
+    $('.upadatenew').click(function() {
+        alert("aaa")
+
+        window.location.href = "edit.html";
+    });
+
+});
+</script>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>面试题</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <style>
+    h5 {
+        color: #ff0000
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>前端面试题</h1>
+        <h2>HTML+CSS</h2>
+        <h4> 1.对WEB标准以及W3C的理解与认识</h4>
+        <p> 标签闭合、标签小写、不乱嵌套、提高搜索机器人搜索几率、使用外 链css和js脚本、结构行为表现的分离、文件下载与页面速度更快、内容能被更多的用户所访问、内容能被更广泛的设备所访问、更少的代码和组件，容易维 护、改版方便，不需要变动页面内容、提供打印版本而不需要复制内容、提高网站易用性；</p>
+        <h4>2.xhtml和html有什么区别</h4> HTML是一种基本的WEB网页设计语言，XHTML是一个基于XML的置标语言
+        <br /> 最主要的不同：
+        <br /> XHTML 元素必须被正确地嵌套。
+        <br /> XHTML 元素必须被关闭。
+        <br /> 标签名必须用小写字母。
+        <br /> XHTML 文档必须拥有根元素。
+        <br />
+        <h4>3.Doctype? 严格模式与混杂模式-如何触发这两种模式，区分它们有何意义?</h4> 用于声明文档使用那种规范（html/Xhtml）一般为 严格 过度 基于框架的html文档
+        <br /> 加入XMl声明可触发，解析方式更改为IE5.5 拥有IE5.5的bug
+        <br />
+        <h4> 4.行内元素有哪些?块级元素有哪些?CSS的盒模型?</h4> 块级元素：div p h1 h2 h4 h4 form ul
+        <br /> 行内元素: a b br i span input select
+        <br /> Css盒模型:内容，border ,margin，padding
+        <br />
+        <h4> 5.CSS引入的方式有哪些? link和@import的区别是?</h4> 内联 内嵌 外链 导入
+        <br /> 区别 ：同时加载
+        <br /> 前者无兼容性，后者CSS2.1以下浏览器不支持
+        <br /> Link 支持使用javascript改变样式，后者不可
+        <br />
+        <h4> 6.CSS选择符有哪些?哪些属性可以继承?优先级算法如何计算?内联和important哪个优先级高?</h4> 标签选择符 类选择符 id选择符
+        <br /> 继承不如指定 Id&gt;class&gt;标签选择
+        <br /> 后者优先级高
+        <br />
+        <h4>7.前端页面有哪三层构成，分别是什么?作用是什么?</h4> 结构层 Html 表示层 CSS 行为层 js
+        <br />
+        <h4>8.css的基本语句构成是?</h4> 选择器&#123;属性1:值1;属性2:值2;……&#125;
+        <br />
+        <h4>  9.你做的页面在哪些流览器测试过?这些浏览器的内核分别是什么?</h4> Ie(Ie内核) 火狐（Gecko） 谷歌（webkit） opear(Presto)
+        <br />
+        <h4>  10.写出几种IE6 BUG的解决方法</h4> 1.双边距BUG float引起的 使用display
+        <br /> 2.3像素问题 使用float引起的 使用dislpay:inline -3px
+        <br /> 3.超链接hover 点击后失效 使用正确的书写顺序 link visited hover active
+        <br /> 4.Ie z-index问题 给父级添加position:relative
+        <br /> 5.Png 透明 使用js代码 改
+        <br /> 6.Min-height 最小高度 ！Important 解决’
+        <br /> 7.select 在ie6下遮盖 使用iframe嵌套
+        <br /> 8.为什么没有办法定义1px左右的宽度容器（IE6默认的行高造成的，使用over:hidden,zoom:0.08 line-height:1px）
+        <br />
+        <h4>  11.标签上title与alt属性的区别是什么?</h4> Alt 当图片不显示是 用文字代表。
+        <br /> Title 为该属性提供信息
+        <br />
+        <h4>  12.描述css reset的作用和用途。</h4> Reset重置浏览器的css默认属性 浏览器的品种不同，样式不同，然后重置，让他们统一
+        <br />
+        <h4>  13.解释css sprites，如何使用。</h4> Css 精灵 把一堆小的图片整合到一张大的图片上，减轻服务器对图片的请求数量
+        <br />
+        <h4>  14.浏览器标准模式和怪异模式之间的区别是什么?
+      </h4> 盒子模型 渲染模式的不同
+        <br /> 使用 window.top.document.compatMode 可显示为什么模式
+        <br />
+        <h4>  15.你如何对网站的文件和资源进行优化?期待的解决方案包括：
+        </h4> 文件合并
+        <br /> 文件最小化/文件压缩
+        <br /> 使用CDN托管
+        <br /> 缓存的使用
+        <br />
+        <h4> 16.什么是语义化的HTML?
+        </h4> 直观的认识标签 对于搜索引擎的抓取有好处
+        <br />
+        <h4>  17.清除浮动的几种方式，各自的优缺点
+        </h4> 1.使用空标签清除浮动 clear:both（理论上能清楚任何标签，，，增加无意义的标签）
+        <br /> 2.使用overflow:auto（空标签元素清除浮动而不得不增加无意代码的弊端,,使用zoom:1用于兼容IE）
+        <br /> 3.是用afert伪元素清除浮动(用于非IE浏览器)
+        <br />
+        <h4>18.html5有哪些新特性、移除了那些元素？如何处理HTML5新标签的浏览器兼容问题？如何区分 HTML 和
+HTML5？</h4>
+        <h5>新特性:</h5>HTML5 现在已经不是 SGML 的子集，主要是关于图像，位置，存储，多任务等功能的增加。 绘画 canvas; 用于媒介回放的 video 和 audio 元素; 本地离线存储 localStorage 长期存储数据，浏览器关闭后数据不丢失; sessionStorage 的数据在浏览器关闭后自动删除; 语意化更好的内容元素，比如 article、footer、header、nav、section; 表单控件，calendar、date、time、email、url、search; 新的技术webworker, websocket, Geolocation;
+        <h5>移除的元素：</h5> 纯表现的元素：basefont，big，center，font, s，strike，tt，u; 对可用性产生负面影响的元素：frame，frameset，noframes；
+        <h5>兼容问题:</h5> 支持HTML5新标签： IE8/IE7/IE6支持通过document.createElement方法产生的标签， 可以利用这一特性让这些浏览器支持HTML5新标签， 浏览器支持新标签后，还需要添加标签默认的样式。 当然也可以直接使用成熟的框架、比如html5shim;
+        <h5>如何区分HTML5:</h5> DOCTYPE声明\新增的结构元素\功能元素
+        <h4>19.浏览器是怎么对HTML5的离线储存资源进行管理和加载的呢？</h4> 在线的情况下，浏览器发现html头部有manifest属性，它会请求manifest文件，如果是第一次访问app，那么浏览器就会根据manifest文件的内容下载相应的资源并且进行离线存储。如果已经访问过app并且资源已经离线存储了，那么浏览器就会使用离线的资源加载页面，然后浏览器会对比新的manifest文件与旧的manifest文件，如果文件没有发生改变，就不做任何操作，如果文件改变了，那么就会重新下载文件中的资源并进行离线存储。 离线的情况下，浏览器就直接使用离线存储的资源。
+        <h4>20.iframe有那些缺点？</h4> iframe会阻塞主页面的Onload事件； 搜索引擎的检索程序无法解读这种页面，不利于SEO; iframe和主页面共享连接池，而浏览器对相同域的连接有限制，所以会影响页面的并行加载。 使用iframe之前需要考虑这两个缺点。如果需要使用iframe，最好是通过javascript 动态给iframe添加src属性值，这样可以绕开以上两个问题。
+        <h4>21.Label的作用是什么？是怎么用的？？</h4> label标签来定义表单控制间的关系,当用户选择该标签时，浏览器会自动将焦点转到和标签相关的表单控件上。
+        <h4>22.HTML5的form如何关闭自动完成功能？</h4> 给不想要提示的 form 或某个 input 设置为 autocomplete=off。
+        <h4>23.如何实现浏览器内多个标签页之间的通信? (阿里)？</h4> WebSocket、SharedWorker； 也可以调用localstorge、cookies等本地存储方式；
+        <br/> localstorge另一个浏览上下文里被添加、修改或删除时，它都会触发一个事件，我们通过监听事件，控制它的值来进行页面信息通信；
+        <br/>注意quirks：Safari 在无痕模式下设置localstorge值时会抛出 QuotaExceededError 的异常；
+        <h4>24.webSocket如何兼容低浏览器？(阿里)？</h4> Adobe Flash Socket 、 ActiveX HTMLFile (IE) 、 基于 multipart 编码发送 XHR 、 基于长轮询的 XHR
+        <h4>25.CSS3有哪些新特性？？</h4> 新增各种CSS选择器 : （: not(.input)：所有 class 不是“input”的节点）
+        <br/>圆角 : （border-radius:8px）
+        <br/>多列布局 : （multi-column layout）
+        <br/>阴影和反射 : （Shadow\Reflect）
+        <br/>文字特效 : （text-shadow、）
+        <br/> 文字渲染 : （Text-decoration）
+        <br/>线性渐变 : （gradient）
+        <br/>旋转 : （transform）
+        <br/> 增加了旋转,缩放,定位,倾斜,动画，多背景 transform:\scale(0.85,0.90)\ translate(0px,-30px)\ skew(-9deg,0deg)\Animation:
+        <hr/>
+        <h2>Javascript</h2>
+        <h4>  1.javascript的typeof返回哪些数据类型
+       </h4> Object number function boolean underfind
+        <br />
+        <h4>  2.例举3种强制类型转换和2种隐式类型转换?
+        </h4> 强制（parseInt,parseFloat,number）
+        <br /> 隐式（== &#8211; ===）
+        <br />
+        <h4>  3.split() join() 的区别
+        </h4> 前者是切割成数组的形式，后者是将数组转换成字符串
+        <br />
+        <h4> 4.数组方法pop() push() unshift() shift()
+        </h4> Push()尾部添加 pop()尾部删除
+        <br /> Unshift()头部添加 shift()头部删除
+        <br />
+        <h4>  5.事件绑定和普通事件有什么区别</h4> 事件绑定就是针对dom元素的事件，绑定在dom元素上普通事件即为非针对dom元素的事件
+        <br />
+        <h4>  6.IE和DOM事件流的区别
+        </h4> 1.执行顺序不一样、
+        <br /> 2.参数不一样
+        <br /> 3.事件加不加on
+        <br /> 4.this指向问题
+        <br />
+        <h4>  7.IE和标准下有哪些兼容性的写法
+        </h4> Var ev = ev || window.event
+        <br /> document.documentElement.clientWidth || document.body.clientWidth
+        <br /> Var target = ev.srcElement||ev.target
+        <br />
+        <h4>  8.ajax请求的时候get 和post方式的区别
+        </h4> 一个在url后面 一个放在虚拟载体里面
+        <br /> 有大小限制
+        <br /> 安全问题
+        <br /> 应用不同 一个是论坛等只需要请求的，一个是类似修改密码的
+        <br />
+        <h4>  9.call和apply的区别
+        </h4> Object.call(this,obj1,obj2,obj3)
+        <br /> Object.apply(this,arguments)
+        <br />
+        <h4> 10.ajax请求时，如何解释json数据
+        </h4> 使用eval parse 鉴于安全性考虑 使用parse更靠谱
+        <br /> 11.b继承a的方法
+        <br />
+        <h4>  12.写一个获取非行间样式的函数
+       </h4>
+        <br /> function getStyle(obj,attr,value)
+        <br /> &#123;
+        <br /> if(!value)
+        <br /> &#123;
+        <br /> if(obj.currentStyle)
+        <br /> &#123;
+        <br /> return obj.currentStyle(attr)
+        <br /> &#125;
+        <br /> else
+        <br /> &#123;
+        <br /> obj.getComputedStyle(attr,false)
+        <br /> &#125;
+        <br /> &#125;
+        <br /> else
+        <br /> &#123;
+        <br /> obj.style[attr]=value
+        <br /> &#125;
+        <br /> &#125;
+        <br />
+        <h4> 13.事件委托是什么
+        </h4> 让利用事件冒泡的原理，让自己的所触发的事件，让他的父元素代替执行！
+        <br /> http://www.webasily.com/?p=78 例子可见此链接
+        <br />
+        <h4> 14.闭包是什么，有什么特性，对页面有什么影响
+        </h4> 闭包就是能够读取其他函数内部变量的函数。
+        <br /> http://blog.csdn.net/gaoshanwudi/article/details/7355794 此链接可查看（问这个问题的不是一个公司）
+        <br />
+        <h4>  15.如何阻止事件冒泡和默认事件
+       </h4> canceBubble return false
+        <br />
+        <h4> 16.添加 删除 替换 插入到某个接点的方法
+       </h4> obj.appendChidl()
+        <br /> obj.innersetBefore
+        <br /> obj.replaceChild
+        <br /> obj.removeChild
+        <br />
+        <h4>  17.解释jsonp的原理，以及为什么不是真正的ajax
+        </h4> 动态创建script标签，回调函数
+        <br /> Ajax是页面无刷新请求数据操作
+        <br />
+        <h4>  18.javascript的本地对象，内置对象和宿主对象
+        </h4> 本地对象为array obj regexp等可以new实例化
+        <br /> 内置对象为gload Math 等不可以实例化的
+        <br /> 宿主为浏览器自带的document,window 等
+        <br />
+        <h4>  19.document load 和document ready的区别
+        </h4> Document.onload 是在结构和样式加载完才执行js
+        <br /> Document.ready原生种没有这个方法，jquery中有 $().ready(function)
+        <br />
+        <h4>  20.”==”和“===”的不同
+       </h4> 前者会自动转换类型
+        <br /> 后者不会
+        <br />
+        <h4>  21.javascript的同源策略
+        </h4> 一段脚本只能读取来自于同一来源的窗口和文档的属性，这里的同一来源指的是主机名、协议和端口号的组合
+        <br />
+        <h4>  22.编写一个数组去重的方法
+        </h4> function oSort(arr)
+        <br /> &#123;
+        <br /> var result =&#123;&#125;;
+        <br /> var newArr=[];
+        <br /> for(var i=0;i&lt;arr.length;i++)
+        <br /> &#123;
+        <br /> if(!result[arr])
+        <br /> &#123;
+        <br /> newArr.push(arr)
+        <br /> result[arr]=1
+        <br /> &#125;
+        <br /> &#125;
+        <br /> return newArr
+        <br /> &#125;
+        <br />
+        <h4>23.说几条写JavaScript的基本规范？</h4> 1.不要在同一行声明多个变量。
+        <br />2.请使用 ===/!==来比较true/false或者数值
+        <br />3.使用对象字面量替代new Array这种形式
+        <br />4.不要使用全局函数。
+        <br />5.Switch语句必须带有default分支
+        <br />6.函数不应该有时候有返回值，有时候没有返回值。
+        <br />7.For循环必须使用大括号
+        <br />8.If语句必须使用大括号
+        <br />9.for-in循环中的变量 应该使用var关键字明确限定作用域，从而避免作用域污染。
+        <h4>24.JavaScript原型，原型链 ? 有什么特点？</h4> 每个对象都会在其内部初始化一个属性，就是prototype(原型)，当我们访问一个对象的属性时， 如果这个对象内部不存在这个属性，那么他就会去prototype里找这个属性，这个prototype又会有自己的prototype， 于是就这样一直找下去，也就是我们平时所说的原型链的概念。 关系：instance.constructor.prototype = instance.__proto__ 特点： JavaScript对象是通过引用来传递的，我们创建的每个新对象实体中并没有一份属于自己的原型副本。当我们修改原型时，与之相关的对象也会继承这一改变。
+        <br /> 当我们需要一个属性的时，Javascript引擎会先看当前对象中是否有这个属性， 如果没有的话， 就会查找他的Prototype对象是否有这个属性，如此递推下去，一直检索到 Object 内建对象。
+        <br />function Func(){}
+        <br />Func.prototype.name = "Sean";
+        <br />Func.prototype.getInfo = function()
+        <br />{
+        <br />return this.name;
+        <br />}
+        <br /> var person = new Func();//现在可以参考var person = Object.create(oldObject);
+        <br />console.log(person.getInfo());//它拥有了Func的属性和方法
+        <br />//"Sean"
+        <br />console.log(Func.prototype);
+        <br />// Func {name="Sean",getInfo=function()}
+        <h4>24.谈谈This对象的理解。</h4>
+        <br />this总是指向函数的直接调用者（而非间接调用者）；
+        <br />如果有new关键字，this指向new出来的那个对象；
+        <br />在事件中，this指向触发这个事件的对象，特殊的是，IE中的attachEvent中的this总是指向全局对象Window；
+        <h4>25.eval是做什么的？</h4> 它的功能是把对应的字符串解析成JS代码并运行； 应该避免使用eval，不安全，非常耗性能（2次，一次解析成js语句，一次执行）。 由JSON字符串转换为JSON对象的时候可以用eval，var obj =eval('('+ str +')');
+        <h4>26.事件是？IE与火狐的事件机制有什么区别？ 如何阻止冒泡？？</h4>
+        1. 我们在网页中的某个操作（有的操作对应多个事件）。例如：当我们点击一个按钮就会产生一个事件。是可以被JavaScript 侦测到的行为。
+        <br />2. 事件处理机制：IE是事件冒泡、Firefox同时支持两种事件模型，也就是：捕获型事件和冒泡型事件；
+        <br /> 3. ev.stopPropagation();（旧ie的方法 ev.cancelBubble = true;）
+    </div>
+</body>
+
+</html>

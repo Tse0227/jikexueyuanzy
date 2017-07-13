@@ -1,0 +1,40 @@
+    .style1 {
+        border: 2px solid #C0C0C0;
+        background-color: #C0C0C0;
+    }
+    
+    .style2 {
+        border: 3px solid #C0C0C0;
+    }
+    
+    .style3 {
+        border-left: 2px solid #C0C0C0;
+        border-right: 2px solid #808080;
+        border-top: 2px solid #C0C0C0;
+        border-bottom: 2px solid #808080;
+        background-color: #C0C0C0;
+    }
+    
+    .style4 {
+        font-family: MicrosoftJhengHei;
+        font-size: 18px;
+        font-weight: bold;
+        background-color: #FFFFFF;
+        width: 80px;
+        height: 50px;
+    }
+    
+    #TextArea1 {
+        height: 63px;
+        width: 349px;
+    }
+    
+    #txtResult {
+        height: 61px;
+        width: 344px;
+    }
+    
+    #Text1 {
+        height: 47px;
+        width: 343px;
+    }

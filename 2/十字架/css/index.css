@@ -1,0 +1,70 @@
+/*最外层的容器*/
+.container {
+    width: 300px;
+    height: 300px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -150px;
+    margin-left: -150px;
+    text-align: center;
+}
+/*最外层的容器结束*/
+
+/*为container 内的div添加公共样式*/
+.container div {
+    line-height: 100px;
+    width: 100px;
+    height: 100px
+}
+
+/*为container 内的div中的img添加公共样式*/
+.container div img {
+    vertical-align: middle;
+}
+
+/*十字架中间3个div的公共样式*/
+.two,.center,.three {
+    float: left;
+}
+
+/*十字架上边的div*/
+.one {
+    background-color: aqua;
+    margin: 0 auto;
+    -webkit-box-shadow: -1px 5px 11px rgba(0, 0, 0, .6);
+    box-shadow: -1px 5px 11px rgba(0, 0, 0, .6);
+}
+
+/*十字架左边的div*/
+.two {
+    background-color: blueviolet;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, .6) inset;
+    -webkit-box-shadow: 0 -4px 15px rgba(0, 0, 0, .6);
+    box-shadow: 0px -4px 15px rgba(0, 0, 0, .6);
+}
+/*十字架中间的div*/
+.center {
+    background-color: chartreuse;
+    -webkit-box-shadow: -1px 5px 11px rgba(0, 0, 0, .6);
+    box-shadow: -1px 5px 11px rgba(0, 0, 0, .6);
+}
+
+/*十字架右边的div*/
+.three {
+    background-color: cornflowerblue;
+    -webkit-box-shadow: 1px 5px 11px rgba(0, 0, 0, .6);
+    box-shadow: 1px 5px 11px rgba(0, 0, 0, .6);
+}
+
+/*十字架下边的div*/
+.four {
+    background-color: darkmagenta;
+    position: absolute;
+    bottom: 0;
+    left: 100px;
+    -webkit-box-shadow: -1px 7px 11px rgba(0, 0, 0, .6);
+    box-shadow: -1px 7px 11px rgba(0, 0, 0, .6);
+}
+
+

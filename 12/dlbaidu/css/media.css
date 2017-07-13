@@ -1,0 +1,40 @@
+/*在小于640px的样式*/
+
+@media only screen and (max-width:640px) {
+    body {
+        background: #eeeff0;
+    }
+    .allblock {
+        min-width: 320px !important;
+        overflow: hidden;
+        height: auto;
+        outline: none;
+        margin: 0 auto;
+    }
+    .nav {
+        height: 54px !important;
+        width: 100% !important;
+        padding-top: 0px !important;
+    }
+    .mobile_park {
+        display: block !important;
+    }
+    .moblie_ul {
+        display: block !important;
+    }
+    #foot {
+        display: block !important;
+    }
+    .pc_ul {
+        display: none !important
+    }
+    .pc_part {
+        display: none !important
+    }
+    .fotconter {
+        display: none !important
+    }
+    .tabpark {
+        display: none !important
+    }
+}

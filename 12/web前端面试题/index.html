@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <title>史上最全的web前端面试题汇总及答案</title>
+    <link rel="stylesheet" media="all" href="index.css">
+    <link rel="stylesheet" media="all" href="index2.css">
+</head>
+
+<body lang="zh-CN" class="reader-black-font">
+    <div class="note">
+        <div class="post">
+            <div class="article">
+                <h1 class="title">史上最全的web前端面试题汇总及答案</h1>
+                <!-- 文章内容 -->
+                <div class="show-content">
+                    <p>很早之前就在看web前端面试题，一直想总结一个比较全面又详细的面试题库，现在总结了一些，分享给大家，以后还会持续更新，有些题目有多种答案，本文只给出其中一种，哪里有问题的欢迎指出。</p>
+                    <h2>Html&amp;CSS</h2>
+                    <blockquote>
+                        <p>1、谈谈你对web标准的理解</p>
+                    </blockquote>
+                    <p><a href="http://www.jianshu.com/p/14c5b7ca56b8" target="_blank">web标准的理解</a></p>
+                    <blockquote>
+                        <p>2、列举html中至少三个实体</p>
+                    </blockquote>
+                    <p>&amp;amp、&amp;nbsp 、&amp;lt、&amp;gt、&amp;reg、&amp;copy
+                        <br>详细请看w3schoolHTML实体符号参考手册
+                        <br><a href="http://www.w3school.com.cn/tags/html_ref_entities.html" target="_blank">w3schoolHTML实体符号参考手册</a></p>
+                    <blockquote>
+                        <p>3、cellpadding与cellspacing有何区别？</p>
+                    </blockquote>
+                    <p>cellpadding：代表单元格边框到内容之间的距离（留白）
+                        <br>cellspacing：cellspacing属性用来指定表格各单元格之间的空隙。此属性的参数值是数字，表示单元格间隙所占的像素点数。</p>
+                    <blockquote>
+                        <p>4、CSS 选择符有哪些？哪些属性可以继承？优先级算法如何计算？ CSS3新增伪类有哪些？</p>
+                    </blockquote>
+                    <p>1.id选择器（ # myid）
+                        <br>2.类选择器（.myclassname）
+                        <br>3.标签选择器（div, h1, p）
+                        <br>4.相邻选择器（h1 + p）
+                        <br>5.子选择器（ul &gt; li）
+                        <br>6.后代选择器（li a）
+                        <br>7.通配符选择器( <code>*</code>)
+                        <br>8.属性选择器（a[rel = "external"]）
+                        <br>9.伪类选择器（a: hover, li: nth - child）
+                        <br><strong>可继承的样式： </strong>
+                        <br>font-size font-family color, UL LI DL DD DT;
+                        <br><strong>不可继承的样式：</strong>
+                        <br>border padding margin width height
+                        <br><strong>优先级</strong>
+                        <br>优先级就近原则，同权重情况下样式定义最近者为准，载入样式以最后载入的定位为准;
+                        <br>优先级为:
+                        <br> !important &gt; id &gt; class &gt; tag
+                        <br> important 比 内联优先级高
+                        <br><strong>CSS3新增伪类举例</strong>
+                        <br>p:first-of-type 选择属于其父元素的首个<code>&lt;p&gt;</code> 元素的每个<code>&lt;p&gt;</code>元素。
+                        <br> p:last-of-type 选择属于其父元素的最后 <code>&lt;p&gt;</code>元素的每个<code>&lt;p&gt;</code>元素。
+                        <br> p:only-of-type 选择属于其父元素唯一的<code>&lt;p&gt;</code>元素的每个<code>&lt;p&gt;</code>元素。
+                        <br> p:only-child 选择属于其父元素的唯一子元素的每个<code>&lt;p&gt;</code>元素。
+                        <br> p:nth-child(2) 选择属于其父元素的第二个子元素的每个<code>&lt;p&gt;</code>元素。
+                        <br> :enabled :disabled 控制表单控件的禁用状态。
+                        <br> :checked 单选框或复选框被选中。</p>
+                    <blockquote>
+                        <p>5、display与visibility有何异同？</p>
+                    </blockquote>
+                    <p>display可以有很多值，visibility只有两个常用值：visible、hidden。
+                        <br>当display为none、visibility为hidden时都会隐藏元素。但display会隐藏掉元素空间，visibility会保留元素空间。</p>
+                    <blockquote>
+                        <p>6、怎么在网页中实现绝对定位？</p>
+                    </blockquote>
+                    <p>absolute
+                        <br><a href="http://www.jianshu.com/p/b4565f691614" target="_blank">绝对定位与相对定位</a></p>
+                    <blockquote>
+                        <p>7、table-layout、border-collapse有何用途？</p>
+                    </blockquote>
+                    <p>①table-layout：设置表格是否自动调整宽高
+                        <br>②border-collapse：表格与单元格及单元格间的边框是否融合在一起。</p>
+                    <blockquote>
+                        <p>8、简述盒模型</p>
+                    </blockquote>
+                    <p><a href="http://www.jianshu.com/p/afb119b66e7b" target="_blank">简述盒模型</a></p>
+                    <blockquote>
+                        <p>9、链接标记target属性的_top、_parent、_blank、main、left、top各有何用处?</p>
+                    </blockquote>
+                    <p><a href="http://www.jianshu.com/p/b43baa832eff" target="_blank">链接标记target与Dom，Bom</a></p>
+                    <blockquote>
+                        <p>10、你对浏览器兼容怎么看？通常你都做哪些处理？</p>
+                    </blockquote>
+                    <p><a href="http://www.jianshu.com/p/f971aae86f4d" target="_blank">浏览器的兼容性</a></p>
+                    <blockquote>
+                        <p>11、get和post的区别？</p>
+                    </blockquote>
+                    <p><strong>GET：</strong>一般用于信息获取，使用URL传递参数，对所发送信息的数量也有限制，一般在2000个字符
+                        <br><strong>POST：</strong>一般用于修改服务器上的资源，对所发送的信息没有限制。
+                        <br>GET方式需要使用Request.QueryString来取得变量的值，而POST方式通过Request.Form来获取变量的值，也就是说Get是通过地址栏来传值，而Post是通过提交表单来传值。
+                        <br>然而，在以下情况中，请使用 POST 请求：
+                        <br>①无法使用缓存文件（更新服务器上的文件或数据库）向服务器发送大量数据（POST 没有数据量限制）。
+                        <br>②发送包含未知字符的用户输入时，POST 比 GET 更稳定也更可靠。</p>
+                    <blockquote>
+                        <p>12、xhtml和html有什么区别</p>
+                    </blockquote>
+                    <p>①HTML是一种基本的WEB网页设计语言,XHTML是一个基于XML的置标语言
+                        <br>②最主要的不同：
+                        <br>XHTML 元素必须被正确地嵌套。
+                        <br>XHTML 元素必须被关闭。
+                        <br>标签名必须用小写字母。
+                        <br>XHTML 文档必须拥有根元素。</p>
+                    <blockquote>
+                        <p>13、行内元素有哪些?块级元素有哪些?空(void)元素有那些？
+                            <br>行内元素和块级元素的区别是什么？行内块元素的兼容性使用？（IE8 以下）</p>
+                    </blockquote>
+                    <p><strong>块级元素：</strong>div p h1 h2 h3 h4 form ul ol dl dt dd
+                        <br><strong>行内元素:</strong> a b br i span input select image strong（强调的语气）
+                        <br><strong>常见空元素：</strong>
+                        <br><code>&lt;br&gt;/&lt;hr&gt;/&lt;img&gt;/&lt;input&gt;/&lt;link&gt;/&lt;meta&gt;</code>
+                        <br><strong>不常见空元素：</strong>
+                        <br><code>&lt;area&gt;/&lt;base&gt;/&lt;col&gt;/&lt;command&gt;/&lt;embed&gt;/&lt;keygen&gt;/&lt;param&gt;/&lt;source&gt;/&lt;track&gt;/&lt;wbr&gt;</code>
+                        <br><strong>行内元素：</strong>会在水平方向排列，不能包含块级元素，设置width无效，height无效(可以设置line-height)，margin上下无效，padding上下无效。
+                        <br><strong>块级元素：</strong>各占据一行，垂直方向排列。从新行开始结束接着一个断行。
+                        <br><strong>兼容性：</strong>
+                        <br><code>display:inline-block;*display:inline;*zoom:1;</code></p>
+                    <blockquote>
+                        <p>14、CSS引入的方式有哪些? link和@import的区别是?</p>
+                    </blockquote>
+                    <p>CSS引入的方式包括内联 内嵌 外链 导入
+                        <br> link和@import的区别是 ：
+                        <br>①link属于XHTML标签，除了加载CSS外，还能用于定义RSS, 定义rel连接属性等作用；而@import是CSS提供的，只能用于加载CSS；
+                        <br>②页面被加载的时，link会同时被加载，而@import引用的CSS会等到页面被加载完再加载；
+                        <br>③import是CSS2.1 提出的，只在IE5以上才能被识别，而link是XHTML标签，无兼容问题；
+                        <br>④后者优先级更高</p>
+                    <blockquote>
+                        <p>15、你做的页面在哪些流览器测试过?这些浏览器的内核分别是什么?介绍一下你对浏览器内核的理解</p>
+                    </blockquote>
+                    <p>Ie(Ie内核) 火狐（Gecko） 谷歌（webkit） opera(blink)
+                        <br><strong>对内核的理解：</strong>
+                        <br>主要分成两部分：渲染引擎(layout engineer或Rendering Engine)和JS引擎。
+                        <br>①渲染引擎：负责取得网页的内容（HTML、XML、图像等等）、整理讯息（例如加入CSS等），以及计算网页的显示方式，然后会输出至显示器或打印机。浏览器的内核的不同对于网页的语法解释会有不同，所以渲染的效果也不相同。所有网页浏览器、电子邮件客户端以及其它需要编辑、显示网络内容的应用程序都需要内核。
+                        <br>②JS引擎：解析和执行javascript来实现网页的动态效果。
+                        <br>最开始渲染引擎和JS引擎并没有区分的很明确，后来JS引擎越来越独立，内核就倾向于只指渲染引擎。</p>
+                    <blockquote>
+                        <p>16、解释css sprites，如何使用。</p>
+                    </blockquote>
+                    <p>Css 精灵 把一堆小的图片整合到一张大的图片上，减轻服务器对图片的请求数量。
+                        <br>适用于以下情况：
+                        <br>①静态图片，不随用户信息的变化而变化
+                        <br>②小图片，图片容量比较小
+                        <br>③加载量比较大</p>
+                    <blockquote>
+                        <p>17、清除浮动的几种方式，各自的优缺点</p>
+                    </blockquote>
+                    <p>（1）父级div定义height。
+                        <br>（2）结尾处加空div标签clear:both。
+                        <br>（3）父级div定义伪类:after和zoom。
+                        <br>（4）父级div定义overflow:hidden。
+                        <br>（5）父级div定义overflow:auto。
+                        <br>（6）父级div也浮动，需要定义宽度。
+                        <br>（7）父级div定义display:table。
+                        <br>（8）结尾处加br标签clear:both。
+                        <br>比较好的是第3种方式，好多网站都这么用。</p>
+                    <blockquote>
+                        <p>18、Doctype作用？标准模式与兼容模式各有什么区别?</p>
+                    </blockquote>
+                    <p>①<code>&lt;!DOCTYPE&gt;</code>告知浏览器的解析器用什么文档标准解析这个文档。<code>DOCTYPE</code>不存在或格式不正确会导致文档以兼容模式呈现。
+                        <br>②标准模式的排版和JS运作模式都是以该浏览器支持的最高标准运行。在兼容模式中，页面以宽松的向后兼容的方式显示,模拟老式浏览器的行为以防止站点无法工作。
+                        <br><strong>注意点：</strong>
+                        <br>HTML5 只需要写&lt;!DOCTYPEHTML&gt;不需要对DTD进行引用，因为HTML5不基于 SGML，因此不需要对DTD进行引用，但是需要doctype来规范浏览器的行为（让浏览器按照它们应该的方式来运行）。
+                        <br>而HTML4.01基于SGML,所以需要对DTD进行引用,才能告知浏览器文档所使用的文档类型。</p>
+                    <blockquote>
+                        <p>19、iframe有哪些缺点？</p>
+                    </blockquote>
+                    <p>①iframe会阻塞主页面的Onload事件，搜索引擎的检索程序无法解读这种页面，不利于SEO；
+                        <br>②iframe和主页面共享连接池，而浏览器对相同域的连接有限制，所以会影响页面的并行加载。
+                        <br>使用iframe之前需要考虑这两个缺点。如果需要使用iframe，最好是通过javascript动态给iframe添加src属性值，这样可以绕开以上两个问题。</p>
+                    <blockquote>
+                        <p>20、如何实现浏览器内多个标签页之间的通信?</p>
+                    </blockquote>
+                    <p>①通过WebSocket、SharedWorker来实现；
+                        <br>②也可以调用localstorge、cookies等本地存储方式。
+                        <br>localstorge另一个浏览上下文（另一个标签页）里被添加、修改或删除时，它都会触发一个事件，我们通过监听事件，控制它的值来进行页面信息通信。
+                        <br>注意quirks：Safari 在无痕模式下设置localstorge值时会抛出 QuotaExceededError 的异常。</p>
+                    <blockquote>
+                        <p>21、如何在页面上实现一个圆形的可点击区域？</p>
+                    </blockquote>
+                    <p>①map+area或者svg
+                        <br>②border-radius
+                        <br>③纯js实现 需要求一个点在不在圆上简单算法、获取鼠标坐标等等</p>
+                    <blockquote>
+                        <p>22、CSS3有哪些新特性？</p>
+                    </blockquote>
+                    <p>① CSS3实现圆角（border-radius:8px），阴影（box-shadow:10px）；
+                        <br> ② 对文字加特效（text-shadow、），线性渐变（gradient），旋转（transform）；
+                        <br> ③ transform:rotate(9deg) scale(0.85,0.90) translate(0px,-30px) skew(-9deg,0deg);
+                        <br>//旋转,缩放,定位,倾斜
+                        <br> ④ 增加了更多的CSS选择器 多背景 rgba
+                        <br><a href="http://www.cnblogs.com/wuyanliang/p/5862643.html" target="_blank">CSS3新增属性</a></p>
+                    <h2>Html5</h2>
+                    <blockquote>
+                        <p>1、Html5与html4相比，各有何优缺点？ 怎样处理html5新标签的兼容性问题？</p>
+                    </blockquote>
+                    <p>html5余html4的异同请看以下的链接
+                        <br><a href="http://www.jianshu.com/p/fa5c54451d1e" target="_blank">html5与html4的异同</a>
+                        <br>兼容性问题
+                        <br>IE8/IE7/IE6支持通过document.createElement方法产生的标签，可以利用这一特性让这些浏览器支持HTML5新标签，浏览器支持新标签后，还需要添加标签默认的样式。当然也可以直接使用成熟的框架、比如html5shim。</p>
+                    <pre class="hljs xml"><code class="xml"><span class="hljs-comment">&lt;!--[if lt IE 9]&gt;
+&lt;script&gt; src="http://html5shim.googlecode.com/svn/trunk/html5.js"&lt;/script&gt;
+&lt;![endif]--&gt;</span></code></pre>
+                    <h2>Javascript</h2>
+                    <blockquote>
+                        <p>1、JS如何使页面跳转?怎么引入一个外部JS文件?</p>
+                    </blockquote>
+                    <p>①直接在head标签内写入js代码，如下</p>
+                    <pre class="hljs xml"><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Script</span> <span class="hljs-attr">Language</span>=<span class="hljs-string">"JavaScript"</span>&gt;</span><span class="undefined">js 语句</span><span class="hljs-tag">&lt;/<span class="hljs-name">Script</span>&gt;</span></code></pre>
+                    <p>②引入写好的js文件，使用语句</p>
+                    <pre class="hljs xml"><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">language</span>=<span class="hljs-string">"JavaScript"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"test.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
+                    <p>也是直接放入到head标签里头，也有的是放在&lt;/body&gt;前面。</p>
+                    <blockquote>
+                        <p>2、输入框的验证用什么事件?</p>
+                    </blockquote>
+                    <p>change(fn)</p>
+                    <blockquote>
+                        <p>3、undefined与null有何异同？</p>
+                    </blockquote>
+                    <p>null是一个表示"无"的对象，转为数值时为0；undefined是一个表示"无"的原始值，转为数值时为NaN。
+                        <br><strong>undefined：</strong>
+                        <br>（1）变量被声明了，但没有赋值时，就等于undefined。
+                        <br>（2) 调用函数时，应该提供的参数没有提供，该参数等于undefined。
+                        <br>（3）对象没有赋值的属性，该属性的值为undefined。
+                        <br>（4）函数没有返回值时，默认返回undefined。
+                        <br><strong>null：</strong>
+                        <br>（1） 作为函数的参数，表示该函数的参数不是对象。
+                        <br>（2） 作为对象原型链的终点。
+                        <br><strong>它们都表示空，转换为boolean后都为false，但是null代表一个对象变量已经被初始化，但未装入对象；undefined表示未初始化变量</strong></p>
+                    <blockquote>
+                        <p>4、===与==有何异同？</p>
+                    </blockquote>
+                    <p>相同点：都是判定两个值是否相等
+                        <br>不同点：==不会判断类型，而===会判断类型</p>
+                    <blockquote>
+                        <p>5、如何判断一个变量的值是否为数字？以及有哪些手段判断变量值的数据类型？</p>
+                    </blockquote>
+                    <p>全局函数isNaN可以判断一个变量的值是否为数字。
+                        <br>可以使用运算符type、instanceof判断变量值的数据类型。</p>
+                    <blockquote>
+                        <p>6、什么是Bom什么是Dom?你如何理解Dom?</p>
+                    </blockquote>
+                    <p><a href="http://www.jianshu.com/p/b43baa832eff" target="_blank">链接标记target与Dom，Bom</a></p>
+                    <blockquote>
+                        <p>7、Array的join、push、splice、slice各有何用途，splice与slice有何异同？</p>
+                    </blockquote>
+                    <p>join：使用指定间隔符连接所有元素为字符串
+                        <br>push：在尾部添加元素并维护array实例的length
+                        <br>splice与slice都是截取一部分元素。不同的在于：slice返回截取后的新实例，splice在原array实例上操作，更详细的请见下文链接。
+                        <br><a href="http://www.jianshu.com/p/fd8c73d2cf2c" target="_blank">JS中数组对象详解</a></p>
+                    <blockquote>
+                        <p>8、如何阻止表单提交？</p>
+                    </blockquote>
+                    <p>在onsubmit事件中返回false</p>
+                    <blockquote>
+                        <p>9、如何动态操作表格？</p>
+                    </blockquote>
+                    <p>可以像普通dom一样操作，但是因为表格的dom比较复杂，所以我通常是使用table的insertRow、deleteRow及tr对象的insetCell、deleteCell操作。</p>
+                    <blockquote>
+                        <p>10、String.match与RegExp.exec有何区别？</p>
+                    </blockquote>
+                    <p>match只会返回没有分组的全部匹配结果或者有分组的第一次匹配结果；
+                        <br>而exec可以利用循环返回全部匹配结果。</p>
+                    <blockquote>
+                        <p>11、为验证手机号写一个正则。</p>
+                    </blockquote>
+                    <pre class="hljs ruby"><code class="ruby">function checkSubmitMobil()
+ {
+ <span class="hljs-keyword">if</span> ($(<span class="hljs-string">"#phoneNum"</span>).val() == <span class="hljs-string">""</span>) {
+ alert(<span class="hljs-string">"手机号码不能为空！"</span>);
+ <span class="hljs-regexp">//</span>$(<span class="hljs-string">"#moileMsg"</span>).html(<span class="hljs-string">"&lt;font color='red'&gt;手机号码不能为空！&lt;/font&gt;"</span>); 
+ $(<span class="hljs-string">"#mobile"</span>).focus();
+ <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+   }
+<span class="hljs-keyword">if</span> (!$(<span class="hljs-string">"#phoneNum"</span>).val().match(<span class="hljs-regexp">/^(?:13\d|15\d|18\d)\d{5}(\d{3}|\*{3})$/</span>)) 
+{
+ alert(<span class="hljs-string">"手机号码格式不正确！"</span>);
+ <span class="hljs-regexp">//</span>$(<span class="hljs-string">"#moileMsg"</span>).html(<span class="hljs-string">"&lt;font color='red'&gt;手机号码格式不正确！请重新输入！&lt;/font&gt;"</span>); 
+$(<span class="hljs-string">"#phoneNum"</span>).focus();
+  <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+  }
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+}</code></pre>
+                    <blockquote>
+                        <p>12、正则的i标记与g标记各有何用途？</p>
+                    </blockquote>
+                    <p>i：不区分大小写；
+                        <br>g：全局匹配。</p>
+                    <blockquote>
+                        <p>13、为String添加trim()方法。</p>
+                    </blockquote>
+                    <pre class="hljs javascript"><code class="javascript"><span class="hljs-built_in">String</span>.prototype.trim = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.replace(<span class="hljs-regexp">/^ +| +$/g</span>,<span class="hljs-string">""</span>);
+}</code></pre>
+                    <blockquote>
+                        <p>14、简述COOKIE。在JS中如何操作Cookie?</p>
+                    </blockquote>
+                    <p><a href="http://www.jianshu.com/p/f348a388411d" target="_blank">简述cookie，在JS中如何操作cookie</a></p>
+                    <blockquote>
+                        <p>15、谈谈javascript数组排序方法sort()的使用，重点介绍sort()参数的使用及其内部机制。</p>
+                    </blockquote>
+                    <p><a href="http://www.jianshu.com/p/14f0ca5c0b29" target="_blank">JS数组排序方法sort()的使用</a></p>
+                    <blockquote>
+                        <p>16、谈谈innerHTML outerHTML innerText之间的区别。</p>
+                    </blockquote>
+                    <p>①innerHTML是w3c的html dom定义的方法，而后两者是IE独有的方法；
+                        <br>②innerHTML代表一个元素节点内由所有子节点，不包括当前节点组成的html代码；
+                        <br>③outerHTML代表一个元素节点内由所有子节点和当前节点组成的html代码；
+                        <br>④innerText代表一个元素节点内由所有子文本节点内容组成的文本；</p>
+                    <blockquote>
+                        <p>17、在JavaScript中定时调用函数 foo() 如何写？</p>
+                    </blockquote>
+                    <pre class="hljs arduino"><code class="arduino"><span class="hljs-built_in">setTimeout</span>(
+    foo,
+    <span class="hljs-number">1000</span>    <span class="hljs-comment">//这里设置延时数</span>
+);</code></pre>
+                    <blockquote>
+                        <p>18、setTimeout与setInterval有何区别?</p>
+                    </blockquote>
+                    <p>①setTimeout和setInterval的语法相同。它们都有两个参数，一个是将要执行的代码字符串，还有一个是以毫秒为单位的时间间隔，当过了那个时间段之后就将执行那段代码。
+                        <br>②不过这两个函数还是有区别的，setInterval在执行完一次代码之后，经过了那个固定的时间间隔，它还会自动重复执行代码，而setTimeout只执行一次那段代码。</p>
+                    <blockquote>
+                        <p>19、你在js中用过array吗？如果用过，array中添加数据用什么方法？ </p>
+                    </blockquote>
+                    <p>在尾部添加使用push();
+                        <br>在头部添加使用unshift();
+                        <br>在任意位置添加使用splice(),但要注意把它的删除个数设置为0;
+                        <br>array详细介绍请看下文链接
+                        <br><a href="http://www.jianshu.com/p/fd8c73d2cf2c" target="_blank">JS中数组对象详解</a></p>
+                    <blockquote>
+                        <p>20、简述javascript的优缺点。</p>
+                    </blockquote>
+                    <p><strong>优点：</strong>简单易用，与Java有类似的语法，可以使用任何文本编辑工具编写，只需要浏览器就可执行程序，并且事先不用编译，逐行执行，无需进行严格的变量声明，而且内置大量现成对象，编写少量程序可以完成目标；
+                        <br><strong>缺点：</strong>不适合开发大型应用程序；</p>
+                    <blockquote>
+                        <p>21、Javascript有哪些内置对象?</p>
+                    </blockquote>
+                    <p> 只有Math和Global（在浏览器环境中，Global就是Window）</p>
+                    <blockquote>
+                        <p>22、列举Javascript的本地对象。</p>
+                    </blockquote>
+                    <p>Object、Function、Array、String、Boolean、Number、Date、RegExp、Error、EvalError、RangeError、ReferenceError、SyntaxError、TypeError、URIError </p>
+                    <blockquote>
+                        <p>23、javascript的typeof返回哪些数据类型</p>
+                    </blockquote>
+                    <p>object number function boolean undefind string</p>
+                    <blockquote>
+                        <p>24、例举3种强制类型转换和2种隐式类型转换?</p>
+                    </blockquote>
+                    <p>强制（parseInt,parseFloat,number）
+                        <br>隐式（== – ===）</p>
+                    <blockquote>
+                        <p>25、IE和DOM事件流的区别</p>
+                    </blockquote>
+                    <p>①执行顺序不一样、
+                        <br>②参数不一样
+                        <br>③事件加不加on
+                        <br>④this指向问题</p>
+                    <blockquote>
+                        <p>26、事件绑定和普通事件有什么区别</p>
+                    </blockquote>
+                    <p>①事件绑定就是针对dom元素的事件，绑定在dom元素上
+                        <br>②普通事件即为非针对dom元素的事件</p>
+                    <blockquote>
+                        <p>27、事件委托是什么</p>
+                    </blockquote>
+                    <p><strong>利用事件冒泡的原理，让自己的所触发的事件，由他的父元素代替执行！</strong>
+                        <br>通俗的讲，事件就是onclick，onmouseover，onmouseout，等就是事件，委托呢，就是让别人来做，这个事件本来是加在某些元素上的，然而你却加到别人身上来做，完成这个事件。
+                        <br>例子请看以下链接
+                        <br><a href="http://www.cnblogs.com/leejersey/p/3801452.html" target="_blank">JS中的事件委托</a></p>
+                    <blockquote>
+                        <p>28、闭包是什么，有什么特性，对页面有什么影响</p>
+                    </blockquote>
+                    <p><strong>什么是闭包</strong>
+                        <br>“官方”的解释：所谓“闭包”，指的是一个拥有许多变量和绑定了这些变量的环境的表达式（通常是一个函数），因而这些变量也是该表达式的一部分。
+                        <br>在 Scala、Scheme、Common Lisp、Smalltalk、Groovy、JavaScript、Ruby、 Python、Go、Lua、objective c、swift 以及Java（Java8及以上）等语言中都能找到对闭包不同程度的支持。
+                        <br>通俗的讲就是函数a的内部函数b，被函数a外部的一个变量引用的时候，就创建了一个闭包。
+                        <br><strong>闭包的特性：</strong>
+                        <br>①.封闭性：外界无法访问闭包内部的数据，如果在闭包内声明变量，外界是无法访问的，除非闭包主动向外界提供访问接口；
+                        <br>②.持久性：一般的函数，调用完毕之后，系统自动注销函数，而对于闭包来说，在外部函数被调用之后，闭包结构依然保存在；
+                        <br><strong>对页面的影响</strong>
+                        <br>使用闭包会占有内存资源，过多的使用闭包会导致内存溢出等。
+                        <br>详细请看以下推荐链接
+                        <br><a href="http://blog.csdn.net/gaoshanwudi/article/details/7355794" target="_blank">深入理解JavaScript的闭包特性 如何给循环中的对象添加事件</a></p>
+                    <blockquote>
+                        <p>29、javascript的本地对象，内置对象和宿主对象</p>
+                    </blockquote>
+                    <p>①本地对象为array obj regexp等可以new实例化
+                        <br>②内置对象为gload Math 等不可以实例化的
+                        <br>③宿主为浏览器自带的document,window 等</p>
+                    <blockquote>
+                        <p>30、编写一个数组去重的方法</p>
+                    </blockquote>
+                    <p>思路：
+                        <br>1.创建一个新的数组存放结果
+                        <br>2.创建一个空对象
+                        <br>3.for循环时，每次取出一个元素与对象进行对比，如果这个元素不重复，则把它存放到结果数组中，同时把这个元素的内容作为对象的一个属性，并赋值为1，存入到第2步建立的对象中。
+                        <br>说明：至于如何对比，就是每次从原数组中取出一个元素，然后到对象中去访问这个属性，如果能访问到值，则说明重复。
+                        <br>代码如下：</p>
+                    <pre class="hljs kotlin"><code class="kotlin">Array.prototype.unique3 = function(){
+ <span class="hljs-keyword">var</span> res = [];
+ <span class="hljs-keyword">var</span> json = {};
+ <span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-keyword">this</span>.length; i++){
+  <span class="hljs-keyword">if</span>(!json[<span class="hljs-keyword">this</span>[i]]){
+   res.push(<span class="hljs-keyword">this</span>[i]);
+   json[<span class="hljs-keyword">this</span>[i]] = <span class="hljs-number">1</span>;
+  }
+ }
+ <span class="hljs-keyword">return</span> res;
+}
+<span class="hljs-keyword">var</span> arr = [<span class="hljs-number">112</span>,<span class="hljs-number">112</span>,<span class="hljs-number">34</span>,<span class="hljs-string">'你好'</span>,<span class="hljs-number">112</span>,<span class="hljs-number">112</span>,<span class="hljs-number">34</span>,<span class="hljs-string">'你好'</span>,<span class="hljs-string">'str'</span>,<span class="hljs-string">'str1'</span>];
+alert(arr.unique3());</code></pre>
+                    <blockquote>
+                        <p>31、this对象的理解</p>
+                    </blockquote>
+                    <p>①this总是指向函数的直接调用者（而非间接调用者）；
+                        <br>②如果有new关键字，this指向new出来的那个对象；
+                        <br>③在事件中，this指向触发这个事件的对象，特殊的是，IE中的attachEvent中的this总是指向全局对象Window；</p>
+                    <blockquote>
+                        <p>32、eval是做什么的？</p>
+                    </blockquote>
+                    <p>①它的功能是把对应的字符串解析成JS代码并运行；
+                        <br>②应该避免使用eval，不安全，非常耗性能（2次，一次解析成js语句，一次执行）。
+                        <br>③由JSON字符串转换为JSON对象的时候可以用eval，<code>var obj =eval('('+ str +')');</code></p>
+                    <blockquote>
+                        <p>33、new操作符具体干了什么呢?</p>
+                    </blockquote>
+                    <p>①创建一个空对象，并且 this 变量引用该对象，同时还继承了该函数的原型。
+                        <br>②属性和方法被加入到 this 引用的对象中。
+                        <br>③新创建的对象由 this 所引用，并且最后隐式的返回 this 。</p>
+                    <blockquote>
+                        <p>34、call() 和 apply() 的区别和作用？</p>
+                    </blockquote>
+                    <p>①apply()函数有两个参数：第一个参数是上下文，第二个参数是参数组成的数组。如果上下文是null，则使用全局对象代替。
+                        <br>如：function.apply(this,[1,2,3])；
+                        <br>②call()的第一个参数是上下文，后续是实例传入的参数序列。
+                        <br>如：function.call(this,1,2,3)；</p>
+                    <blockquote>
+                        <p>如何获取UA</p>
+                    </blockquote>
+                    <p>JS代码</p>
+                    <pre class="hljs fortran"><code class="fortran"><span class="hljs-function"><span class="hljs-keyword">function</span></span> whatBrowser() {  
+        document.Browser.<span class="hljs-keyword">Name</span>.<span class="hljs-keyword">value</span>=navigator.appName;  
+        document.Browser.Version.<span class="hljs-keyword">value</span>=navigator.appVersion;  
+        document.Browser.Code.<span class="hljs-keyword">value</span>=navigator.appCodeName;  
+        document.Browser.Agent.<span class="hljs-keyword">value</span>=navigator.userAgent;  
+    }</code></pre>
+                    <blockquote>
+                        <p>35、请解释一下 JavaScript 的同源策略</p>
+                    </blockquote>
+                    <p><strong>概念:</strong>同源策略是客户端脚本（尤其是Javascript）的重要的安全度量标准。它最早出自Netscape Navigator2.0，其目的是防止某个文档或脚本从多个不同源装载。
+                        <br>这里的同源策略指的是：协议，域名，端口相同，同源策略是一种安全协议。指一段脚本只能读取来自同一来源的窗口和文档的属性。
+                        <br><strong>为什么要有同源限制？</strong>
+                        <br>我们举例说明：比如一个黑客程序，他利用Iframe把真正的银行登录页面嵌到他的页面上，当你使用真实的用户名，密码登录时，他的页面就可以通过Javascript读取到你的表单中input中的内容，这样用户名，密码就轻松到手了。</p>
+                    <blockquote>
+                        <p>36、请描述一下 cookies，sessionStorage 和 localStorage 的区别？</p>
+                    </blockquote>
+                    <p>cookie在浏览器和服务器间来回传递。 sessionStorage和localStorage不会
+                        <br> sessionStorage和localStorage的存储空间更大；
+                        <br> sessionStorage和localStorage有更多丰富易用的接口；
+                        <br> sessionStorage和localStorage各自独立的存储空间；</p>
+                    <h2>Ajax</h2>
+                    <blockquote>
+                        <p>1、什么是Ajax？</p>
+                    </blockquote>
+                    <p>Ajax（Asynchronous JavaScript + XML），即异步JavaScript + XML的缩写，主要用来页面异步刷新，也是构建RIA的一种基础技术。</p>
+                    <blockquote>
+                        <p>2、如何使用Ajax从服务器获取数据？</p>
+                    </blockquote>
+                    <p>①创建XMLHttpRequest对象，注意兼容IE6的情况
+                        <br>②使用XMLHttpRequest对象的open方法，其中有三个参数：
+                        <br>a.字符串，代表html的请求:GET,POST。
+                        <br>b.要访问的服务器的URL。
+                        <br>c.Boolean值，true表示异步，flase表示同步，一般情况下是异步，默认为true。
+                        <br>③ajax的回调函数。xhr.readyState==4表示请求已经结束，服务器响应完成。
+                        <br>status表示http请求的状态，200表示正常响应；404表示资源找不到；500表示服务器端错误。
+                        <br>④发送ajax请求。如果没有数据，可以不传或者传递null；如果post请求传递数据：首先设置xhr的请求头信息：</p>
+                    <pre class="hljs less"><code class="less"><span class="hljs-selector-tag">xhr</span><span class="hljs-selector-class">.setRequestHeader</span>(<span class="hljs-string">"Content-type"</span>,<span class="hljs-string">"application/x-www-formurlencoded"</span>);</code></pre>
+                    <p>再传递参数：</p>
+                    <pre class="hljs applescript"><code class="applescript">xhr.send(<span class="hljs-built_in">name</span>=liujianhong&amp;password=<span class="hljs-number">123</span>);</code></pre>
+                    <blockquote>
+                        <p>3、解释XMLHttpRequest是什么？</p>
+                    </blockquote>
+                    <p>XMLHttpRequest是我们得以实现异步通讯的根本。最早在IE5 中以ActiveX组件实现；最近，Mozilla 1.0和Safari 1.2中实现为本地对象。XMLHttpRequest虽然不是W3C标准，但却得到了FireFox、Safari、Opera、Konqueror、IE等绝大多数浏览器的支持。</p>
+                    <blockquote>
+                        <p>4、谈谈你对Ajax的理解。你在项目中如何使用Ajax？手写一个简单的Ajax操作。</p>
+                    </blockquote>
+                    <p>Ajax（Asynchronous JavaScript + XML），即异步JavaScript + XML的缩写，主要用来页面异步刷新，也是构建RIA的一种基础技术。因为它涉及浏览器兼容、跨域等问题，在项目中一般会使用一些基础类库辅助实现，如jQuery等。
+                        <br>一个简单的Ajax操作如下。</p>
+                    <pre class="hljs actionscript"><code class="actionscript"><span class="hljs-keyword">var</span> xhr = <span class="hljs-keyword">new</span> XMLHttpRequest();
+<span class="hljs-comment">//在环境中需要做浏览器兼容，这里省略了</span>
+xhr.onreadystatechange = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+<span class="hljs-comment">//这里注册当xhr状态发生改变后调用事件</span>
+<span class="hljs-keyword">if</span>( xhr.readyState == <span class="hljs-number">4</span> ) {
+<span class="hljs-comment">//通常在读取状态为4的时候才能获取到部分数据</span>
+所以一般状态在<span class="hljs-number">4</span>的时候才进行处理
+<span class="hljs-keyword">if</span>(status==<span class="hljs-number">200</span>) {
+            <span class="hljs-comment">//当正常请求到资源时的处理,</span>
+可以调用xhr.responseText或xhr.responseXml获取数据
+        }
+        <span class="hljs-keyword">else</span> {
+        <span class="hljs-comment">//当请求资源失败时的处理</span>
+        }
+    }
+}
+xhr.open( <span class="hljs-string">"GET"</span>, url);
+<span class="hljs-comment">//设置xhr的请求方式和url,这里使用的是GET方式，</span>
+ <span class="hljs-comment">//如果有参数，则连接在url后面</span>
+ <span class="hljs-comment">/*
+  如果是POST请求，还当设置请求的Content-Type
+  数据使用send作为参数发送
+  */</span>
+xhr.send();</code></pre>
+                    <blockquote>
+                        <p>5、谈谈你对JSON的理解。</p>
+                    </blockquote>
+                    <p>JSON(JavaScript Object Notation) 是一种轻量级的数据交换格式。 易于人阅读和编写。同时也易于机器解析和生成。 它基于JavaScript Programming Language, Standard ECMA-262 3rd Edition - December 1999的一个子集。 JSON采用完全独立于语言的文本格式，但是也使用了类似于C语言家族的习惯（包括C, C++, C#, Java, JavaScript, Perl, Python等）。 这些特性使JSON成为理想的数据交换语言。
+                        <br>所以它往往在AJAX中替代XML，交换数据。</p>
+                    <blockquote>
+                        <p>6、你的项目中有使用到跨域吗？你在项目中是如何处理JS跨域问题的？</p>
+                    </blockquote>
+                    <p>①有。
+                        <br>②主要是使用其它网站提供的javascript api如QQ。使用script的src可以直接读取跨域资源。
+                        <br>③当然跨域还有其它处理方式：如代理服务器、改变domain、JSONP等。</p>
+                    <blockquote>
+                        <p>7、你在项目中有使用到网页到服务器的即时通信吗？说说你都采用什么手段处理以及你所知道的处理办法？</p>
+                    </blockquote>
+                    <p>没有用到，但我知道html的websockets、flash的socket、ajax长轮询等都可以实现。</p>
+                    <blockquote>
+                        <p>8、你在AJAX中有遇到乱码吗？如果遇到，你是如何解决的？</p>
+                    </blockquote>
+                    <p>①遇到过。
+                        <br>②一般我首先统一页面和服务器编码，对请求和响应的Content-Type设置正确编码；对请求参数进行编码处理。</p>
+                    <blockquote>
+                        <p>9、解释jsonp的原理，以及为什么不是真正的ajax</p>
+                    </blockquote>
+                    <p>①Ajax与JSONP这两种技术看起来很像，目的也一样，都是请求一个url，然后把服务器返回的数据进行处理，因此jQuery等框架都把JSONP作为Ajax的一种形式。
+                        <br>②实际上Ajax与JSONP有着本质上的不同。Ajax的核心是通过XMLHttpRequest获取数据，而JSONP的核心则是动态添加&lt;script&gt;标签来调用服务器提供的js文件。
+                        <br>③Ajax与JSONP的区别也不在于是否跨域，Ajax通过服务端代理也可以跨域，JSONP也可获取同源数据。
+                    </p>
+                    <blockquote>
+                        <p>10、ajax 有那些优缺点?如何解决跨域问题?</p>
+                    </blockquote>
+                    <p><strong>优点：</strong>
+                        <br>①通过异步模式，提升了用户体验.
+                        <br>②优化了浏览器和服务器之间的传输，减少不必要的数据往返，减少了带宽占用.
+                        <br>③Ajax在客户端运行，承担了一部分本来由服务器承担的工作，减少了大用户量下的服务器负载。
+                        <br>④Ajax可以实现动态不刷新（局部刷新）
+                        <br><strong>缺点：</strong>
+                        <br>①安全问题 AJAX暴露了与服务器交互的细节。
+                        <br>②对搜索引擎的支持比较弱。
+                        <br>③不容易调试。
+                        <br><strong>跨域问题：</strong>
+                        <br>jsonp、 iframe、window.name、window.postMessage、服务器上设置代理页面。</p>
+                    <blockquote>
+                        <p>11、JavaScript原型，原型链 ? 有什么特点？</p>
+                    </blockquote>
+                    <p>①原型对象也是普通的对象，是对象一个自带隐式的 <strong>proto</strong> 属性，原型也有可能有自己的原型，如果一个原型对象的原型不为null的话，我们就称之为原型链。
+                        <br>②原型链是由一些用来继承和共享属性的对象组成的（有限的）对象链。</p>
+                    <h2>JQuery</h2>
+                    <blockquote>
+                        <p>1、你使用过jQuery吗？如果有，你为什么要使用jQuery呢？</p>
+                    </blockquote>
+                    <p>①用过。
+                        <br>②如果使用原生javascript开发的话，会面临很多问题，如浏览器兼容、Ajax数据解析、Dom、事件注册操作等都非常烦锁，而jQuery正好解决了这些问题。
+                        <br>③当然jQuery还有非常有用的其它特性，如为dom对象绑定数据、动画、等。并且jQuery还非常容易扩展，在它的基础上开发非常灵活，也有众多的插件可用，如jQueryUI、easyUI等。</p>
+                    <blockquote>
+                        <p>2、Javascript与jQuery有什么区别？</p>
+                    </blockquote>
+                    <p>jquery 就对javascript的一个扩展，封装，就是让javascript更好用，更简单。</p>
+                    <blockquote>
+                        <p>3、在jQuery中如何注册事件？</p>
+                    </blockquote>
+                    <p>使用bind()方法注册事件，但通常我们使用与事件同名的方法注册更方便，如：click()、hover()等。</p>
+                    <blockquote>
+                        <p>4、如何获取Html内容？如何获取文本内容？如何获取属性值？如何获取input值？如何创建新的节点？</p>
+                    </blockquote>
+                    <p>可以使用html()获取html内容。
+                        <br>使用text()获取文本内容。
+                        <br>使用attr()可以获取属性值，使用css()可以获取样式属性值。
+                        <br>通过val()便可以获取input的值
+                        <br>把节点元素名加上&lt;、&gt;作为参数调用jQuery方法便可创建新节点,如：jQuery(“&lt;div&gt;”)。</p>
+                    <blockquote>
+                        <p>5、如何向页面插入节点？</p>
+                    </blockquote>
+                    <p>调用append方法，将新节点作为参数。</p>
+                    <blockquote>
+                        <p>6、ajax、get、post、ajaxSetup、getJSON各有何用途？</p>
+                    </blockquote>
+                    <p>①ajax：jQuery对ajax执行的核心方法。其它ajax方法都是使用该方法实现。
+                        <br>②get：专门用于发送get请求的便捷方法。
+                        <br>③post：专门用于发送post请求的便捷方法。
+                        <br>④ajaxSetup：设置调用ajax方法时的默认值。
+                        <br>⑤getJSON：专门用于向服务器请求json格式数据的便捷方法。</p>
+                    <blockquote>
+                        <p>7、如何使用从服务器获取一个复杂数据（对象）？</p>
+                    </blockquote>
+                    <p>①通常会把这个数据转换为通用的数据交换格式，如xml或json。由于xml解析比较麻烦，所以使用json比较多。
+                        <br>②在jQuery中有专门的获取服务器json数据的方法，getJSON()，在回调中，jQuery会自动将json转换为javascript对象。</p>
+                    <blockquote>
+                        <p>8、addClass、css有何用途？</p>
+                    </blockquote>
+                    <p>①addClass：为元素设置class属性，如果该元素已经存在class属性，则在其值后添加空格及新的class值。
+                        <br>②css：操作元素的style属性的方法。</p>
+                    <blockquote>
+                        <p>9、如何获取一个元素的实际位置？</p>
+                    </blockquote>
+                    <p>使用position()或offset()都可以。</p>
+                    <blockquote>
+                        <p>10、bind()、unbind()、hover()有何用途？</p>
+                    </blockquote>
+                    <p>bind()：注册特定事件。
+                        <br>unbind()：删除特定事件。
+                        <br>hover()：同时注册鼠标移入、移出事件。</p>
+                    <blockquote>
+                        <p>11、你知道jQuery插件吗？你了解jQuery执行原理和插件机制吗？你都用过哪些jQuery插件？ </p>
+                    </blockquote>
+                    <p>①知道jQuery插件。
+                        <br>②其原理是扩展jQuery本身及其核心函数的原型实现。可以调用其extend实现对它的扩展。
+                        <br>③jQuery插件有很多，常见的有：jQueryUI、jQuery-Cookie、jQuery-Timer等。</p>
+                    <h2>其它</h2>
+                    <blockquote>
+                        <p>1、HTTP状态码知道哪些？</p>
+                    </blockquote>
+                    <p>100 Continue 继续，一般在发送post请求时，已发送了http header之后服务端将返回此信息，表示确认，之后发送具体参数信息
+                        <br>200 OK 正常返回信息
+                        <br>201 Created 请求成功并且服务器创建了新的资源
+                        <br>202 Accepted 服务器已接受请求，但尚未处理
+                        <br>301 Moved Permanently 请求的网页已永久移动到新位置。
+                        <br>302 Found 临时性重定向。
+                        <br>303 See Other 临时性重定向，且总是使用 GET 请求新的 URI。
+                        <br>304 Not Modified 自从上次请求后，请求的网页未修改过。
+                        <br>400 Bad Request 服务器无法理解请求的格式，客户端不应当尝试再次使用相同的内容发起请求。
+                        <br>401 Unauthorized 请求未授权。
+                        <br>403 Forbidden 禁止访问。
+                        <br>404 Not Found 找不到如何与 URI 相匹配的资源。
+                        <br>500 Internal Server Error 最常见的服务器端错误。
+                        <br>503 Service Unavailable 服务器端暂时无法处理请求（可能是过载或维护）。</p>
+                    <blockquote>
+                        <p>2、你有哪些性能优化的方法</p>
+                    </blockquote>
+                    <p>（1） 减少http请求次数：CSS Sprites, JS、CSS源码压缩、图片大小控制合适；网页Gzip，CDN托管，data缓存 ，图片服务器。
+                        <br>（2） 前端模板 JS+数据，减少由于HTML标签导致的带宽浪费，前端用变量保存AJAX请求结果，每次操作本地变量，不用请求，减少请求次数。
+                        <br>（3） 用innerHTML代替DOM操作，减少DOM操作次数，优化javascript性能。
+                        <br>（4） 当需要设置的样式很多时设置className而不是直接操作style。
+                        <br>（5） 少用全局变量、缓存DOM节点查找的结果。减少IO读取操作。
+                        <br>（6） 避免使用CSS Expression（css表达式)又称Dynamic properties(动态属性)。
+                        <br>（7） 图片预加载，将样式表放在顶部，将脚本放在底部 加上时间戳。</p>
+                    <blockquote>
+                        <p>3、什么叫优雅降级和渐进增强？</p>
+                    </blockquote>
+                    <p><strong>优雅降级：</strong>Web站点在所有新式浏览器中都能正常工作，如果用户使用的是老式浏览器，则代码会检查以确认它们是否能正常工作。由于IE独特的盒模型布局问题，针对不同版本的IE的hack实践过优雅降级了,为那些无法支持功能的浏览器增加候选方案，使之在旧式浏览器上以某种形式降级体验却不至于完全失效。
+                        <br><strong>渐进增强：</strong>从被所有浏览器支持的基本功能开始，逐步地添加那些只有新式浏览器才支持的功能,向页面增加无害于基础浏览器的额外样式和功能的。当浏览器支持时，它们会自动地呈现出来并发挥作用。</p>
+                    <blockquote>
+                        <p>4、哪些常见操作会造成内存泄漏？</p>
+                    </blockquote>
+                    <p>①内存泄漏指任何对象在您不再拥有或需要它之后仍然存在。
+                        <br>②垃圾回收器定期扫描对象，并计算引用了每个对象的其他对象的数量。如果一个对象的引用数量为 0（没有其他对象引用过该对象），或对该对象的惟一引用是循环的，那么该对象的内存即可回收。
+                        <br>③setTimeout 的第一个参数使用字符串而非函数的话，会引发内存泄漏。
+                        <br>④闭包、控制台日志、循环（在两个对象彼此引用且彼此保留时，就会产生一个循环）</p>
+                    <blockquote>
+                        <p>5、线程与进程的区别</p>
+                    </blockquote>
+                    <p>①一个程序至少有一个进程,一个进程至少有一个线程。
+                        <br>②线程的划分尺度小于进程，使得多线程程序的并发性高。
+                        <br>③另外，进程在执行过程中拥有独立的内存单元，而多个线程共享内存，从而极大地提高了程序的运行效率。
+                        <br>④线程在执行过程中与进程还是有区别的。每个独立的线程有一个程序运行的入口、顺序执行序列和程序的出口。但是线程不能够独立执行，必须依存在应用程序中，由应用程序提供多个线程执行控制。
+                        <br>⑤从逻辑角度来看，多线程的意义在于一个应用程序中，有多个执行部分可以同时执行。但操作系统并没有将多个线程看做多个独立的应用，来实现进程的调度和管理以及资源分配。这就是进程和线程的重要区别。</p>
+                    <blockquote>
+                        <p>6、一个页面从输入 URL 到页面加载显示完成，这个过程中都发生了什么？</p>
+                    </blockquote>
+                    <p>（1）查找浏览器缓存
+                        <br>（2）DNS解析、查找该域名对应的IP地址、重定向（301）、发出第二个GET请求
+                        <br>（3）进行HTTP协议会话
+                        <br>（4）客户端发送报头(请求报头)
+                        <br>（5）服务器回馈报头(响应报头)
+                        <br>（6）html文档开始下载
+                        <br>（7）文档树建立，根据标记请求所需指定MIME类型的文件
+                        <br>（8）文件显示</p>
+                    <blockquote>
+                        <p>以下自行发挥</p>
+                    </blockquote>
+                    <p>①为什么换工作
+                        <br>②你常用的开发工具是什么，为什么？
+                        <br>③对前端界面工程师这个职位是怎么样理解的？它的前景会怎么样？
+                        <br>④加班的看法？
+                        <br>⑤有没有女朋友</p>
+                    <hr>
+                    <p>更多的前端面试题，请看下篇文章
+                        <br><a href="http://www.jianshu.com/nb/13832566" target="_blank">谢小逸面试题精选</a>
+                        <br>前端面试题系列将会持续更新，欢迎关注</p>
+                </div>
+            </div>
+</body>
+
+</html>

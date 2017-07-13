@@ -1,0 +1,384 @@
+    body {
+        font: 12px arial;
+        background: #f3f2f3;
+        behavior: url(csshover.htc);
+    }
+    
+    * html {
+        margin: 0;
+        padding: 0;
+    }
+    
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body,
+    p,
+    form,
+    ul,
+    li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    
+    article,
+    aside,
+    dialog,
+    footer,
+    header,
+    section,
+    footer,
+    nav,
+    figure,
+    menu {
+        display: block
+    }
+    
+    a {
+        text-decoration: none;
+        padding: 0px;
+        margin: 0px;
+        color: #000
+    }
+    /*<!-- 顶部导航 -->*/
+    
+    .userinfo {
+        position: absolute;
+        right: 10px;
+        top: 3px;
+        z-index: 999;
+        text-align: right;
+        white-space: nowrap;
+        line-height: 20px;
+        font: 12px Arial;
+        background: #fff;
+    }
+    
+    .userinfo a {
+        color: rgb(85, 85, 85);
+        font-family: 宋体;
+        margin: 0px 7px;
+    }
+    
+    .userinfo .nav_pipe {
+        height: 14px;
+        color: #bbb;
+        width: 1px;
+    }
+    /*  <!-- 顶部导航end -->   */
+    
+    .headsearch {
+        position: relative;
+        min-width: 1220px;
+        border-bottom: 1px solid #ebebeb;
+        box-shadow: 0 0 3px rgba(150, 150, 150, .2);
+        min-height: 90px;
+        width: 100%;
+        padding-bottom: 8px;
+        background: #fff;
+    }
+    /*<!-- 搜索框上菜单 -->   */
+    
+    .s_tab {
+        position: relative;
+        height: 30px;
+        line-height: 60px;
+        margin-left: 194px;
+        padding-top: 12px;
+        line-height: 30px;
+        overflow: hidden;
+    }
+    
+    .s_tab b,
+    .s_tab a {
+        color: #555;
+        font-size: 14px;
+        margin-right: 15px;
+        font-family: 'Microsoft YaHei', arial, 'Hiragino Sans GB', sans-serif;
+    }
+    /*<!-- 搜索框上菜单 end-->   */
+    /*<!-- logo -->   */
+    
+    .logo {
+        position: relative;
+        float: left;
+        top: 0;
+        margin-left: 40px;
+        margin-right: 16px;
+        width: 137px;
+        height: 46px;
+    }
+    
+    .logo img {
+        display: block;
+        position: relative;
+        top: -17px;
+        width: 137px;
+        height: 46px;
+        border: 0;
+    }
+    /*<!-- logo end -->   */
+    /*<!-- 搜索框 -->   */
+    
+    .s_nav {
+        position: relative;
+        float: left;
+    }
+    
+    .searchform {
+        width: 585px;
+        position: relative;
+        font-size: 0;
+    }
+    
+    .inp_wt {
+        width: 453px;
+        height: 32px;
+        display: inline-block;
+        border: 1px solid #b8b8b8;
+        border-right: 0;
+        vertical-align: top;
+    }
+    
+    .btn_wt {
+        width: 98px;
+        height: 32px;
+        vertical-align: top;
+        display: inline-block;
+        border: 1px solid #ccc;
+    }
+    
+    .whtietext {
+        width: 416px;
+        height: 22px;
+        font: 16px/22px arial;
+        margin: 6px 0 0 7px;
+        outline: 0;
+        background: #fff;
+        padding: 0;
+        border: 0;
+    }
+    
+    .s_btn {
+        width: 98px;
+        height: 32px;
+        border-left: 0;
+        padding: 0;
+        padding-top: 1px;
+        line-height: 32px;
+        font-size: 16px;
+        font-family: 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', '宋体', Tahoma, Arial, Helvetica, STHeiti;
+        background: url(../image/search_btn_af3bab1.png) 0 0 no-repeat;
+        color: #333;
+        border: 0;
+        cursor: pointer;
+    }
+    
+    .s_btn:hover {
+        background-position: 0 -37px;
+    }
+    
+    .sttb {
+        position: absolute;
+        display: block;
+        top: 8px;
+        right: 138px;
+        overflow: hidden;
+        width: 22px;
+        height: 17px;
+        line-height: 10em;
+        outline: 0;
+    }
+    
+    .sttb img {
+        position: relative;
+        display: block;
+        width: 18px;
+        height: 16px;
+        border: 0;
+    }
+    /*<!-- 搜索框 end-->   */
+    /*图片筛选*/
+    
+    .imgfilter {
+        position: relative;
+        float: left;
+        width: 433px;
+        height: 32px;
+        line-height: 32px;
+    }
+    
+    .filter_open {
+        width: 70px!important;
+        display: block;
+        float: left;
+        height: 34px;
+        font-size: 12px;
+        line-height: 34px;
+        color: #ccc;
+        cursor: auto;
+    }
+    
+    .filter_open:hover {
+        text-decoration: underline;
+    }
+    
+    .imgfilter_text {
+        float: left;
+        height: 14px;
+        margin-top: 10px;
+        line-height: 14px;
+        font-family: "宋体";
+        color: #00c;
+    }
+    
+    .imgfilter_arrow {
+        float: left;
+        width: 13px;
+        height: 13px;
+        margin-top: 10px;
+        margin-left: 3px;
+        background-../image: url(../image/filter-status_1697eab.png);
+        background-repeat: no-repeat;
+        background-position: 0 0;
+    }
+    
+    .filter-hover .filter-menu-item {
+        background: url(//img0.bdstatic.com/static/searchresult/img/lazy_img_d398a71.png) 67px 12px no-repeat;
+    }
+    
+    .filter_holder {
+        position: relative;
+        z-index: 2;
+        float: left;
+        width: 276px;
+        height: 32px;
+        margin-left: 8px;
+        border: 1px solid #eee;
+        background-color: #fff;
+    }
+    
+    .holder_arrow {
+        position: absolute;
+        top: 7px;
+        left: -17px;
+        width: 0;
+        height: 0;
+        border-width: 8px;
+        border-style: solid;
+        border-color: transparent #ebebeb transparent transparent;
+    }
+    
+    .top_filter_hoder {
+        width: 276px;
+        height: 32px;
+        position: relative;
+        text-align: left;
+    }
+    
+    .subFilter {
+        position: relative;
+        float: left;
+    }
+    
+    .filter_hover {
+        color: #333;
+        background: #ebebeb;
+    }
+    
+    .filter_hover ul {
+        display: block;
+    }
+    
+    .filter_menu_item {
+        position: relative;
+        height: 32px;
+        width: 80px;
+        padding-right: 12px;
+        line-height: 32px;
+        color: #666;
+        cursor: pointer;
+        text-align: left;
+        text-indent: 10px;
+        font-size: 12px;
+        background: url(../image/lazy_img_d398a71.png) 67px -107px no-repeat;
+        margin-left: 0;
+        font-family: "微软雅黑", "宋体", Arial;
+    }
+    
+    .subFilter ul {
+        list-style: none;
+        font-size: 12px;
+        color: #2b66b4;
+    }
+    
+    .filter_item_con {
+        z-index: 100;
+        position: absolute;
+        display: none;
+        top: 32px;
+        left: 0;
+        border: 1px solid #ebebeb;
+        background-color: #fff;
+        width: 90px;
+        box-shadow: none;
+    }
+    
+    .subFilter ul li {
+        position: relative;
+        text-align: left;
+        text-indent: 7px;
+        height: 16px;
+        line-height: 16px;
+        border: 0;
+        border-left: 3px solid #fff;
+        cursor: pointer;
+        color: #666;
+        zoom: 1;
+        margin: 10px 0;
+        padding: 0;
+        background: 0 0;
+        font-family: "微软雅黑", "宋体", Arial;
+    }
+    
+    .subFilter ul li:hover {
+        color: #00c;
+    }
+    
+    .subFilter ul .list_first_item {
+        border-color: #fff;
+    }
+    
+    .subFilter ul .selected {
+        color: #00c;
+        cursor: default;
+        border-left: 3px solid #00c;
+    }
+    /*图片筛选*/
+    /*瀑布流图片*/
+    
+    .imgcontain {
+        margin: 0 0 0 30px;
+        background: #f3f2f3;
+        position: relative;
+    }
+    
+    .imgcontain .box {
+        /*position: relative;*/
+        float: left;
+    }
+    
+    .imgcontain .content {
+        padding: 10px;
+        border: 1px solid #ccc;
+        box-shadow: 0 0 5px #ccc;
+        border-radius: 5px
+    }
+    
+    .imgcontain .content img {
+        width: 220px;
+        height: auto
+    }

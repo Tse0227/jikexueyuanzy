@@ -1,0 +1,40 @@
+    .container {
+        width: 400px;
+        margin: 0 auto;
+        background: cornflowerblue;
+        height: 300px;
+        text-align: center;
+    }
+    
+    .inputblock {
+        width: 100%;
+    }
+    
+    .inputblock input[type="text"] {
+        width: 150px;
+        height: 50px;
+        line-height: 100px;
+        border-radius: 10px;
+    }
+    
+    .btnblock {
+        width: 100%;
+        margin-top: 20px
+    }
+    
+    .btnblock button {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        border-radius: 10px;
+    }
+    
+    #result {
+        width: 300px;
+        height: 30px;
+        background: darkgray;
+        border: none;
+        margin-top: 20px;
+        text-align: center;
+        color: #fff;
+    }

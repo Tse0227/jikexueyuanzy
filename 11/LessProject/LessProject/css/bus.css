@@ -1,0 +1,87 @@
+article {
+  width: 700px;
+  height: 350px;
+  margin: 50px auto;
+  background-color: #C0C0C0;
+}
+.module-top-left {
+  float: left;
+  width: 350px;
+  height: 140px;
+  padding: 20px 0px 0px 0px;
+}
+.module-top-left .bus-num {
+  display: inline-block;
+  padding: 10px 50px 10px 50px;
+  background-color: red;
+  color: #ffffff;
+  font-size: 48px;
+  font-family: "microsoft yahei";
+}
+.module-top-left .bus-time {
+  text-indent: 20px;
+  color: #000000;
+  font-size: 14px;
+  font-family: "microsoft yahei";
+}
+.module-top-right {
+  text-align: center;
+  height: 140px;
+  padding: 20px 0px 0px 0px;
+}
+.module-top-right .p {
+  color: #008000;
+  font-size: 14px;
+  font-family: "microsoft yahei";
+}
+.module-top-right .p-first {
+  color: #008000;
+  font-size: 18px;
+  font-family: "microsoft yahei";
+}
+.module-top-right .p-last {
+  color: #ff0000;
+  font-size: 18px;
+  font-family: "microsoft yahei";
+}
+.module-center {
+  text-align: center;
+  background-color: #008000;
+  height: 100px;
+}
+.module-center span {
+  color: #ffffff;
+  font-size: 15px;
+  font-family: "microsoft yahei";
+  width: 1em;
+  line-height: 1.5em;
+  display: inline-block;
+}
+.module-center .three {
+  line-height: 2.2em;
+}
+.module-bottom {
+  text-align: center;
+  font-size: 0;
+}
+.module-bottom p {
+  color: #000000;
+  font-size: 15px;
+  font-family: "microsoft yahei";
+}
+.module-bottom span {
+  display: inline-block;
+}
+.module-bottom .span-first {
+  width: 466.66666667px;
+  height: 5px;
+  background-color: red;
+  margin-bottom: 8px;
+}
+.module-bottom .span-last {
+  border-color: transparent transparent transparent #ff0000;
+  width: 0;
+  height: 0;
+  border-width: 10px;
+  border-style: solid;
+}

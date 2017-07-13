@@ -1,0 +1,162 @@
+/*新版弹性盒模型的水平分栏*/
+
+.con_hor {
+    display: -webkit-flex;
+    width: 300px;
+    background-color: red;
+    height: 100px
+}
+
+.first {
+    height: 100px;
+    background-color: orange;
+    -webkit-flex: 1;
+    -webkit-order: 3;
+}
+
+.second {
+    height: 100px;
+    background-color: aquamarine;
+    -webkit-flex: 1;
+    -webkit-order: 1;
+}
+
+.three {
+    height: 100px;
+    background-color: #E3FF7F;
+    -webkit-flex: 1;
+    -webkit-order: 2;
+}
+
+
+/*旧版弹性盒模型的水平分栏*/
+
+.con_hor1 {
+    display: -webkit-box;
+    width: 300px;
+    background-color: red;
+    height: 100px
+}
+
+.first1 {
+    height: 100px;
+    background-color: orange;
+    -webkit-box-flex: 1;
+    -webkit-box-ordinal-group: 2;
+}
+
+.second1 {
+    height: 100px;
+    background-color: aquamarine;
+    -webkit-box-flex: 1;
+    -webkit-box-ordinal-group: 1;
+}
+
+.three1 {
+    height: 100px;
+    background-color: #E3FF7F;
+    -webkit-box-flex: 1;
+    -webkit-box-ordinal-group: 3;
+}
+
+
+/*弹性盒模型的cloumn分栏*/
+
+.con_cloumn {
+    width: 200px;
+    height: 200px;
+    background-color: orange;
+    -webkit-column-count: 3;
+    -webkit-column-rule-style: dashed;
+    -webkit-column-gap: 20px:
+}
+
+.con_cloumn div {
+    height: 200px
+}
+
+.cloumn_a {
+    background-color: aquamarine
+}
+
+.cloumn_b {
+    background-color: aqua
+}
+
+.cloumn_c {
+    background-color: chartreuse
+}
+
+
+/*新版弹性盒模型的垂直分栏*/
+
+.con_ver {
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    width: 300px;
+    background-color: red;
+    height: 500px;
+}
+
+.con_ver_one {
+    height: 100px;
+    background-color: orange;
+    -webkit-flex: 1;
+    -webkit-order: 2;
+}
+
+.con_ver_two {
+    height: 100px;
+    background-color: aquamarine;
+    -webkit-flex: 1;
+    -webkit-order: 3;
+}
+
+.con_ver_three {
+    height: 100px;
+    background-color: #E3FF7F;
+    -webkit-flex: 1;
+    -webkit-order: 1;
+}
+
+
+/*旧版弹性盒模型的垂直分栏*/
+
+.con_ver1 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    width: 300px;
+    background-color: red;
+    height: 500px;
+}
+
+.con_ver_one1 {
+    height: 100px;
+    background-color: orange;
+    -webkit-box-flex: 1;
+    -webkit-box-order: 1;
+}
+
+.con_ver_two1 {
+    height: 100px;
+    background-color: aquamarine;
+    -webkit-box-flex: 1;
+    -webkit-box-order: 3;
+}
+
+.con_ver_three1 {
+    height: 100px;
+    background-color: #E3FF7F;
+    -webkit-box-flex: 1;
+    -webkit-box-order: 2;
+}
+
+
+/*旧版垂直水平居中*/
+
+.allbl {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+}

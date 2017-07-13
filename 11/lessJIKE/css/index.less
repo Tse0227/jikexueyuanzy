@@ -1,0 +1,296 @@
+@hhigh: 60px;
+.kc-icon (@p1, @p2) {
+    background-position: @p1 @p2;
+}
+
+.header {
+    padding: 0px;
+    margin: 0px;
+    height: @hhigh;
+    border-bottom: 1px solid #ececec;
+    background: #fff;
+    .nav_park {
+        width: 1000px;
+        margin: 0 auto;
+        line-height: @hhigh;
+        height: @hhigh;
+        nav {
+            line-height: @hhigh;
+            height: @hhigh;
+            display: inline-block;
+            float: left;
+            .vip_lesson {
+                padding: 10px 0;
+                a {
+                    display: block;
+                    height: 40px;
+                    line-height: 40px;
+                    color: #666;
+                    span {
+                        color: #bbb;
+                        float: right;
+                    }
+                }
+                i {
+                    background: url("../image/allicon.png") 0 0 no-repeat;
+                    background-size: 64px 64px;
+                    width: 14px;
+                    height: 14px;
+                    display: inline-block;
+                    margin-right: 10px!important;
+                }
+                //nav会员课程
+                .kck_icon {
+                    .kc-icon (0,
+                    -13px)
+                }
+                .zyljt_icon {
+                    .kc-icon (-45px,
+                    0)
+                }
+                .zstxt_icon {
+                    .kc-icon (-30px,
+                    -13px)
+                }
+                .xlkc_icon {
+                    background: url("../image/xlkc2.png") 0 0 no-repeat;
+                    .kc-icon (0,
+                    0)
+                }
+                .kcbq_icon {
+                    .kc-icon (-15px,
+                    -13px)
+                }
+                .vip_icon {
+                    .kc-icon (-16px,
+                    0)
+                }
+                //极客社区
+                .jswd_icon {
+                    .kc-icon(0,
+                    -27px);
+                }
+                .wiki_icon {
+                    .kc-icon(-29px,
+                    -27px);
+                }
+                .sq_icon {
+                    .kc-icon(0,
+                    2px);
+                }
+                .zygx_icon {
+                    .kc-icon(-30px,
+                    0);
+                }
+            }
+            ul {
+                li {
+                    position: relative;
+                    font-size: 14px;
+                    display: inline-block;
+                    margin-right: 50px;
+                    cursor: pointer;
+                    height: @hhigh;
+                    a {
+                        &:hover {
+                            color: #35b558;
+                        }
+                    }
+                    a {
+                        color: #333;
+                    }
+                    i {
+                        margin-left: 5px;
+                    }
+                    .submenu {
+                        display: none;
+                        opacity: 0;
+                        position: absolute;
+                        z-index: 1000;
+                        top: 58px;
+                        left: 0;
+                        background: #fff;
+                        font-size: 12px;
+                        color: #666;
+                        width: 280px;
+                        a {
+                            display: block;
+                            height: 30px;
+                            line-height: 30px;
+                            padding: 0 15px;
+                        }
+                        h3 {
+                            margin: 10px 0;
+                            padding: 0 15px;
+                            background: #fafafa;
+                            height: 28px;
+                            line-height: 28px;
+                            font-weight: 300;
+                        }
+                    }
+                    &:hover {
+                        color: #35b558;
+                        .submenu {
+                            -webkit-animation: menuhover 1s ease-in;
+                            -moz-animation: menuhover 1s ease-in;
+                            -o-animation: menuhover 1s ease-in;
+                            -animation: menuhover 1s ease-in;
+                            animation-fill-mode: forwards;
+                            -moz-animation-fill-mode: forwards;
+                            -o-animation-fill-mode: forwards;
+                            -webkit-animation-fill-mode: forwards;
+                            display: block;
+                        }
+                        .arrow_icon {
+                            transform: rotate(45deg);
+                            -webkit-transform: rotate(45deg);
+                            -moz-transform: rotate(45deg);
+                            -ms-transform: rotate(45deg);
+                            -webkit-animation: spin 0.5s linear;
+                            -moz-animation: spin 0.5s linear;
+                            -o-animation: spin 0.5s linear;
+                            -animation: spin 0.5s linear;
+                            animation-fill-mode: forwards;
+                            -moz-animation-fill-mode: forwards;
+                            -o-animation-fill-mode: forwards;
+                            -webkit-animation-fill-mode: forwards;
+                        }
+                    }
+                    .arrow_icon {
+                        width: 8px;
+                        height: 8px;
+                        border-top: 1px solid #c1c1c1;
+                        border-left: 1px solid #c1c1c1;
+                        display: inline-block;
+                        transform: rotate(-135deg);
+                        -webkit-transform: rotate(-135deg);
+                        -moz-transform: rotate(-135deg);
+                        -ms-transform: rotate(-135deg);
+                        transform-origin: 4px 4px;
+                        margin-bottom: 2px;
+                        margin-left: 5px
+                    }
+                }
+            }
+        }
+        .logo {
+            width: 109px;
+            display: inline-block;
+            margin-right: 60px;
+            height: @hhigh;
+            float: left;
+            img {
+                float: left;
+                width: 109px;
+                margin-top: 10px;
+                border: 0 none;
+            }
+        }
+    }
+    .relative {
+        position: relative;
+    }
+}
+
+// 动画
+@-moz-keyframes menuhover {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes menuhover {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes menuhover {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes menuhover {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes spin {
+    0% {
+        -moz-transform: rotate(0deg)
+    }
+    100% {
+        -moz-transform: rotate(405deg)
+    }
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg)
+    }
+    100% {
+        -webkit-transform: rotate(405deg)
+    }
+}
+
+@-o-keyframes spin {
+    0% {
+        -o-transform: rotate(0deg)
+    }
+    100% {
+        -o-transform: rotate(405deg)
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(405deg)
+    }
+}
+
+.icon_bg {
+    background: url("../image/allicon3.png") 0 0 no-repeat;
+    background-size: 16px 148px;
+    background-position: -2px -2px;
+}
+
+.school_list {
+    span {
+        background: url("../image/allicon.png") 0 0 no-repeat;
+        background-size: 64px 64px;
+        margin-left: 5px;
+        width: 14px;
+        height: 14px;
+        display: inline-block;
+        margin-right: 10px !important;
+    }
+    .web_icon {
+        background-position: -15px -27px;
+    }
+    .python_icon {
+        .icon_bg
+    }
+    .go_icon {
+        .icon_bg
+    }
+    .ios_icon {
+        .icon_bg
+    }
+}

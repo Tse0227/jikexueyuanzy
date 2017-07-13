@@ -1,0 +1,26 @@
+{
+    "name": "nodegulp",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+        "start": "node ./bin/www",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "dependencies": {
+        "body-parser": "~1.17.1",
+        "cookie-parser": "~1.4.3",
+        "debug": "~2.6.3",
+        "ejs": "~2.5.6",
+        "express": "~4.15.2",
+        "morgan": "~1.8.1",
+        "serve-favicon": "~2.4.2"
+    },
+    "devDependencies": {
+        "gulp": "^3.9.1",
+        "gulp-concat": "^2.6.1",
+        "gulp-minify-css": "^1.2.4",
+        "gulp-uglify": "^3.0.0",
+        "gulp-watch": "^4.3.11",
+        "mysql": "^2.13.0"
+    }
+}

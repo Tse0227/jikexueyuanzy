@@ -1,0 +1,124 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-width: 600px
+}
+
+
+/*头部*/
+
+.header {
+    background: #f3f1f5;
+    line-height: 80px;
+    height: 80px;
+    margin-bottom: 13px
+}
+
+
+/*中间内容*/
+
+.atricle {
+    overflow: hidden;
+}
+
+
+/*底部*/
+
+.footer {
+    background: #f3f1f5;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    margin-top: 13px
+}
+
+
+/*中间内容的左边*/
+
+.left {
+    background: #f3f1f5;
+    float: left;
+    width: 200px;
+    margin-left: -100%;
+    /*三列等高*/
+    padding-bottom: 9999999px;
+    margin-bottom: -9999999px;
+    /*三列等高*/
+}
+
+.left ul {
+    width: 92%;
+    margin: 0 auto;
+}
+
+.left li {
+    list-style: none;
+    font-size: 17px;
+    line-height: 30px;
+    font-weight: bold
+}
+
+.left li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.left li a:hover {
+    text-decoration: underline;
+}
+
+
+/*中间内容的右边*/
+
+.right {
+    background: #f3f1f5;
+    float: left;
+    width: 200px;
+    margin-left: -200px;
+    /*三列等高*/
+    padding-bottom: 9999999px;
+    margin-bottom: -9999999px;
+    /*三列等高*/
+    ;
+}
+
+.right p {
+    font-size: 17px;
+    line-height: 30px;
+    font-weight: bold
+}
+
+
+/*中间内容的中间*/
+
+.middle {
+    width: 100%;
+    float: left;
+    /*三列等高*/
+    padding-bottom: 9999999px;
+    margin-bottom: -9999999px;
+    /*三列等高*/
+}
+
+.inner {
+    background: #f3f1f5;
+    margin: 0 213px;
+    overflow: hidden;
+}
+
+.inner article {
+    padding: 4px
+}
+
+.inner h2 {
+    padding: 10px
+}
+
+.inner p {
+    font-size: 16px;
+    line-height: 29px;
+    text-indent: 40px;
+}

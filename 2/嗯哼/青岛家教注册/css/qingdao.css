@@ -1,0 +1,87 @@
+p {
+    padding: 0;
+    margin: 0
+}
+
+body {
+    background-color: #0d7792
+}
+
+
+/*最外层的div*/
+
+.allblock {
+    width: 1000px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: #ffffff;
+}
+
+
+/*包裹table的div*/
+
+.tableblock {
+    width: 800px;
+    margin: 0 auto;
+}
+
+
+/*头部logo的 a的样式*/
+
+.toplink a {
+    color: #FF0099;
+    display: inline-block;
+    margin-right: 4px;
+    font-size: 12px;
+    text-decoration: none
+}
+
+
+/*表单table的样式*/
+
+.tableini {
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+}
+
+
+/*表单table的td的样式*/
+
+.tableini td {
+    border: 1px solid #ccc;
+    border-left: none;
+    border-top: none;
+    font-size: 12px
+}
+
+
+/*左边单元格的样式*/
+
+.leftblock {
+    text-align: right;
+}
+
+
+/*标红字体*/
+
+.redpart,
+.leftblock span {
+    color: #FF0000
+}
+
+
+/*标蓝字体*/
+
+.bluepart {
+    color: #0000ff
+}
+
+
+/*table标题的样式*/
+
+.titlef {
+    line-height: 24px;
+    font-size: 18px;
+    font-weight: bold;
+}

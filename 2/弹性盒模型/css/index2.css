@@ -1,0 +1,158 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    display: block;
+    margin-top: 11px;
+    font-size: 14px;
+    color: #3b3b3b;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #fff
+}
+
+.container {
+    width: 800px;
+    height: 500px;
+    background-color: #f2f2f2;
+    margin: 0 auto;
+    display: -webkit-flex;
+    -webkit-column-count: 3;
+}
+
+
+/*c_left左边部分*/
+.c_left {
+    height: 500px;
+    -webkit-flex: 1;
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+}
+
+
+/*c_left里面三个div的公共样式*/
+.left_one,
+.left_two,
+.left_three {
+    -webkit-flex: 1;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    -webkit-box-orient: vertical;
+}
+
+
+/*c_left左边部分背景icon的公共样式*/
+.foodicon,
+.hotelicon,
+.movieicon {
+    background: url(http://s1.map.bdimg.com/mobile/simple/static/index/images/index-nb-round_3e43e00.png) no-repeat 0 0;
+    width: 53px;
+    height: 53px
+}
+
+.foodicon {
+    background-position: -3px -2px;
+}
+
+.hotelicon {
+    background-position: -3px -64px;
+}
+
+.movieicon {
+    background-position: -3px -126px;
+}
+
+
+/*c_center中间部分*/
+.c_center {
+    height: 500px;
+    -webkit-flex: 2;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+}
+
+.c_center img:nth-child(2) {
+    display: none
+}
+
+.c_center img:nth-child(3) {
+    display: none
+}
+
+
+/*c_right右边部分*/
+.c_right {
+    height: 500px;
+    -webkit-flex: 2;
+    display: -webkit-flex;
+    -webkit-column-count: 3;
+    -webkit-flex-direction: column;
+}
+
+.r_top {
+    -webkit-flex: 1;
+    display: -webkit-flex;
+    -webkit-column-count: 3;
+}
+
+.c_bottom {
+    -webkit-flex: 4;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+}
+
+
+/*r_top里面3个div的公共样式*/
+.r_first,
+.r_second,
+.r_other {
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    -webkit-flex: 1;
+    -webkit-box-orient: vertical;
+}
+
+
+/*cc_right右边部分背景icon的公共样式*/
+.subicon,
+.busicon,
+.cricon {
+    background: url(http://s1.map.bdimg.com/mobile/simple/static/index/images/index-nb-round_3e43e00.png) no-repeat 0 0;
+    width: 45px;
+    height: 45px
+}
+
+.subicon {
+    background-position: -7px -922px;
+}
+
+.busicon {
+    background-position: -7px -986px;
+}
+
+.cricon {
+    background-position: -7px -1050px;
+}
+
+/*c_bottom下p的样式*/
+.c_bottom p {
+    text-indent: 32px;
+    line-height: 18px;
+    margin-left: 4px;
+}
+
+.c_bottom p:nth-child(2) {
+    display: none;
+}
+
+.c_bottom p:nth-child(3) {
+    display: none;
+}

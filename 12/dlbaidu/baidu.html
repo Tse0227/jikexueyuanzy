@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>百度一下，你就知道</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="shortcut icon" href="http:/www.baidu.com/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="bulid/all.css">
+    <link rel="stylesheet" type="text/css" href="css/media.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <!--[if lt IE 9]>  
+ <script type="text/javascript" src="js/html5.js"></script>
+<![endif]-->
+</head>
+
+<body>
+    <div class="allblock">
+        <div class="headblock">
+            <!-- 头部导航 -->
+            <header class="nav navlogin">
+                <div class="moblie_ul">
+                    <div><a class="login icomoon" href="#">&#xe906;</a></div>
+                    <div><a class="skin icomoon" href="#">&#xe907;</a></div>
+                </div>
+                <div class="ceather">
+                    <div class="showceather">
+                        <a href="">
+                            <span><em>广州：</em></span>
+                            <span class="show_icon"> <span class="weather_icon"></span><em>32℃</em></span>
+                            <span class="show_airParm"><em class="show_polution_name">轻度</em><em>106</em></span>
+                            <span class="show-vertical">|</span>
+                        </a>
+                    </div>
+                    <div class="showc_icon">
+                        <a href="">宝箱</a>
+                        <a href="javascript:void(0)" class="changeskin">换肤</a>
+                        <a href="">消息(1)</a>
+                    </div>
+                </div>
+                <ul class="pc_ul loginul">
+                    <li><a href="http://www.nuomi.com/?cid=002540">糯米</a></li>
+                    <li><a href="http://news.baidu.com/">新闻</a></li>
+                    <li class="lchild3"><a href="https://www.hao123.com/?tn=95004955_hao_pg">hao123</a></li>
+                    <li><a href="http://map.baidu.com/">地图</a></li>
+                    <li><a href="http://v.baidu.com/">视频</a></li>
+                    <li><a href="http://tieba.baidu.com/">贴吧</a></li>
+                    <li class="lchild7 onlogin"><a class="loginhide" href="https://passport.baidu.com/v2/?login&tpl=mn&u=http%3A%2F%2Fwww.baidu.com%2F">登录</a><a href="" class="loginname">谢小逸</a>
+                        <div class="menuname">
+                            <div class="ulsname">
+                                <a href="">我的vip</a>
+                                <a href="">个人中心</a>
+                                <a href="">账号设置</a>
+                                <a href="">意见反馈</a>
+                                <a href="">退出</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="lchild8"><a href="">设置</a>
+                        <div class="menu">
+                            <div class="uls">
+                                <a href="">搜索设置</a>
+                                <a href="">高级搜索</a>
+                                <a href="">关闭预测</a>
+                                <a href="">搜索历史</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="lchild9 loginl9"><a href="">更多产品</a>
+                        <!-- 更多产品 -->
+                        <div class="product">
+                            <div class="productuls">
+                                <a href="" class="firsta">更多产品</a>
+                                <a href="http://music.baidu.com/"><span class="pro1"></span>音乐</a>
+                                <a href="http://image.baidu.com/"><span class="pro2"></span>图片</a>
+                                <a href="http://zhidao.baidu.com/"><span class="pro3"></span>知道</a>
+                                <a href="http://wenku.baidu.com/"><span class="pro4"></span>文库</a>
+                                <a href="http://top.baidu.com/"><span class="pro5"></span>风云榜</a>
+                                <a href="http://e.baidu.com/"><span class="pro6"></span>百度推广</a>
+                                <a href="http://www.baidu.com/more/" class="lasta">全部产品>></a>
+                            </div>
+                        </div>
+                        <!-- 更多产品 -->
+                    </li>
+                </ul>
+                <div style="clear: both">
+                </div>
+            </header>
+            <!-- 头部导航end -->
+            <!-- logo和输入框 -->
+            <article class="form_logo">
+                <div class="pc_part">
+                    <div class="logoimg"><img src="image/bd_logo1_31bdc765.png" height="129" width="270" alt=""></div>
+                    <form class="formpart" method="get" action="http://www.baidu.com/s">
+                        <span class="textinput"><span class="btnimg"></span>
+                        <input type="text" name="wd" class="sinput" value="">
+                        </span>
+                        <span class="btnsumbit"><input type="submit" name="" class="sumbtn" value="百度一下"></span>
+                    </form>
+                </div>
+                <div class="mobile_park">
+                    <div class="moblie_logo"><img src="image/plus_logo.png" height="55" width="175" alt=""></div>
+                    <form class="mobile_form" method="get" action="http://www.baidu.com/s">
+                        <div class="mobile_textinput">
+                            <input type="text" name="wd" autocomplete="off" autocorrect="off" maxlength="64" id="index-kw" class="mobile_sinput" value="">
+                            <div class="mobile_btnsumbit">
+                                <input type="submit" name="" class="mobile_sumbtn" value="百度一下">
+                            </div>
+                        </div>
+                    </form>
+                    <div class="navlife">
+                        <a href="#"><i class="icomoon">&#xe905;</i>新闻</a>
+                        <a href="#"><i class="icomoon">&#xe901;</i>小说</a>
+                        <a href="#"><i class="icomoon">&#xe908;</i>视频</a>
+                        <a href="#"><i class="icomoon">&#xe908;</i>糯米</a>
+                        <a href="#"><i class="icomoon">&#xe903;</i>地图</a>
+                        <a href="javascript:void(0)" class="addcontent"><i class="icomoon">&#xe904;</i>更多</a>
+                    </div>
+                    <div class="navlife2">
+                        <a href="#"><i class="icomoon">&#xe905;</i>新闻</a>
+                        <a href="#"><i class="icomoon">&#xe901;</i>小说</a>
+                        <a href="#"><i class="icomoon">&#xe908;</i>视频</a>
+                        <a href="#"><i class="icomoon">&#xe908;</i>糯米</a>
+                        <a href="#"><i class="icomoon">&#xe903;</i>地图</a>
+                    </div>
+                    <div class="mobile_data">
+                        <div class="mobile_plus">
+                            <div class="mobile_title">
+                                <div class="normal_title">
+                                    <h2>我的导航</h2>
+                                    <a class="plus_edit" href="javascript:;">
+                                        <i class="icon_edit icomoon">&#xe909;</i>
+                                        <ul class="noTapColor">
+                                            <li data-action="edit">编辑</li>
+                                            <li data-action="top">置顶</li>
+                                            <li data-action="close" class="close">关闭</li>
+                                        </ul>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="plus_content">
+                                <a href="#"><span>新闻</span></a>
+                                <a href="#"><span>小说</span></a>
+                                <a href="#"><span>视频</span></a>
+                                <a href="#"><span>糯米</span></a>
+                                <a href="#"><span>地图</span></a>
+                                <a href="#"><span>更多</span></a>
+                                <a href="#"><span>新闻</span></a>
+                                <a href="#"><span>小说</span></a>
+                                <a href="#"><span>视频</span></a>
+                                <a href="#"><span>糯米</span></a>
+                                <a href="#"><span>地图</span></a>
+                                <a href="javascript:;"><span class="icomoon icon_add">&#xe900;</span></a>
+                            </div>
+                        </div>
+                        <div class="mobile_plus">
+                            <div class="mobile_title">
+                                <div class="normal_title">
+                                    <h2>我的导航</h2>
+                                    <a class="plus_edit" href="javascript:;">
+                                        <i class="icon_edit icomoon">&#xe909;</i>
+                                        <ul class="noTapColor">
+                                            <li data-action="edit">编辑</li>
+                                            <li data-action="top">置顶</li>
+                                            <li data-action="close" class="close">关闭</li>
+                                        </ul>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="plus_content">
+                                <a href="#"><span>新闻</span></a>
+                                <a href="#"><span>小说</span></a>
+                                <a href="#"><span>视频</span></a>
+                                <a href="#"><span>糯米</span></a>
+                                <a href="#"><span>地图</span></a>
+                                <a href="#"><span>更多</span></a>
+                                <a href="#"><span>新闻</span></a>
+                                <a href="#"><span>小说</span></a>
+                                <a href="#"><span>视频</span></a>
+                                <a href="#"><span>糯米</span></a>
+                                <a href="#"><span>地图</span></a>
+                                <a href="#"><span class="icomoon icon_add">&#xe900;</span></a>
+                            </div>
+                        </div>
+                        <div class="mobile_plus">
+                            <div class="mobile_title">
+                                <div class="normal_title">
+                                    <h2>我的导航</h2>
+                                    <a class="plus_edit" href="javascript:;">
+                                        <i class="icon_edit icomoon">&#xe909;</i>
+                                        <ul class="noTapColor">
+                                            <li data-action="edit">编辑</li>
+                                            <li data-action="top">置顶</li>
+                                            <li data-action="close" class="close">关闭</li>
+                                        </ul>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="plus_content">
+                                <a href="#"><span>新闻</span></a>
+                                <a href="#"><span>小说</span></a>
+                                <a href="#"><span>视频</span></a>
+                                <a href="#"><span>糯米</span></a>
+                                <a href="#"><span>地图</span></a>
+                                <a href="#"><span>更多</span></a>
+                                <a href="#"><span>新闻</span></a>
+                                <a href="#"><span>小说</span></a>
+                                <a href="#"><span>视频</span></a>
+                                <a href="#"><span>糯米</span></a>
+                                <a href="#"><span>地图</span></a>
+                                <a href="#"><span class="icomoon icon_add">&#xe900;</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <!-- logo和输入框end -->
+            <!-- tab部分 -->
+            <div class="tabpark">
+                <div class="s_main">
+                    <div class="s_ctner_menus">
+                        <div class="s_menus_outer">
+                            <span class="tab s_menu_mine"><span class="mine_icon"></span><span class="mine_text">我的关注</span></span>
+                            <span class="tab tab1 tabon">推荐</span>
+                            <span class="tab tab2">导航</span>
+                            <span class="tab tab3">视频</span>
+                            <span class="tab tab4">购物</span>
+                        </div>
+                        <span class="s_menu_set" title="设置">
+                             <div class="menu_icon"></div>
+                        </span>
+                    </div>
+                    <div class="s_ctner_contents">
+                        <div class="s_contentnone s_content1 ">
+                            <div class="mine">
+                                <div class="mine_nav">
+                                    <span class="mine_title">
+                                        <div class="mine_title_icon"><em></em></div>
+                                        <span class="mine_title_text">我的导航(0)</span>
+                                    </span>
+                                    <div class="s_setbar">
+                                        <div class="set_bar_content">
+                                            <div class="set_btn btn_add">添加</div>
+                                            <div class="set_btn btn_fanli">
+                                                <span class="fanli_icon"></span>
+                                                <span>返利模式</span>
+                                            </div>
+                                            <div class="set_btn btn_totop" title="置顶" style="color: rgb(153, 153, 153);"> 置顶 </div>
+                                        </div>
+                                    </div>
+                                    <div class="s_mblock_content">
+                                        <div class="nav_blank">
+                                            <div class="add_nav"></div>
+                                        </div>
+                                    </div>
+                                    <div class="tips_manager_area">
+                                        <div class="tips_manager_btn">
+                                            <span class="tips_manager_icon"></span>
+                                            <span class="tips_manager_text">自定义 </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="s_contentnone s_content2 s_contentblock">
+                            <div class="page_new">
+                                <div class="news_wrapper">
+                                    <div class="news_container_right">
+                                        <div class="news_lists">
+                                            <div class="list_title">
+                                                <div class="title-text"><a href="http://top.baidu.com/?fr=mhd_card" target="_blank">实时热点</a></div>
+                                                <a class="hot-refresh"> <span class="hot-refresh-icon"></span><span class="hot-refresh-text">换一换</span></a>
+                                            </div>
+                                            <ul class="list_content">
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">广州港珠澳大桥海事处</a><span class="new-identity"></span></span>
+                                                </li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">广州港珠澳大桥海事处</a><span class="new-identity"></span></span>
+                                                </li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">广州港珠澳大桥海事处</a><span class="new-identity"></span></span>
+                                                </li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">广州港珠澳大桥海事处</a><span class="new-identity"></span></span>
+                                                </li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">广州港珠澳大桥海事处</a><span class="new-identity"></span></span>
+                                                </li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">广州港珠澳大桥海事处</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">广州港珠澳大桥海事处</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content"> 清华老师被骗千万</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">张雨绮街边秀美腿</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">母女低价强买排骨</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">彭于晏探班吴京</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">杨慧首谈宋喆出轨</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">甄子丹示爱汪诗诗</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">张纪中妻子出轨</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">iPhone7曝光</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">傅园慧收贝尔战书</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">菲总统向中国求情</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">学生制火车站模型</a></span></li>
+                                            </ul>
+                                            <ul class="list_content list_news_on">
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">航班提前起飞误机</a><span class="new-identity"></span></span>
+                                                </li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">马戏团虐待黑熊</a><span class="new-identity"></span></span>
+                                                </li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">纪晓岚和珅重聚</a><span class="new-identity"></span></span>
+                                                </li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">纪晓岚和珅重聚</a><span class="new-identity"></span></span>
+                                                </li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">纪晓岚和珅重聚</a><span class="new-identity"></span></span>
+                                                </li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">女子名下多九套房</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">张翰机场长腿吸睛</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content"> 清华老师被骗千万</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">张雨绮街边秀美腿</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">母女低价强买排骨</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">彭于晏探班吴京</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">杨慧首谈宋喆出轨</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">甄子丹示爱汪诗诗</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">张纪中妻子出轨</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">iPhone7曝光</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">傅园慧收贝尔战书</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">菲总统向中国求情</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">学生制火车站模型</a></span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="news_flash_tips">
+                                        <div class="left_line"></div>
+                                        <div class="tips_content">
+                                            <div class="tips_icon"></div>
+                                            <span>以下信息根据您的兴趣推荐</span>
+                                        </div>
+                                        <div class="right_line"></div>
+                                    </div>
+                                    <div class="news_container_left">
+                                        <div class="news_list_wrapper">
+                                            <div class="news_item news_fisrt">
+                                                <div class="pic_content">
+                                                    <a href="">
+                                                        <img src="image/news1.jpg" height="119" width="179" alt="">
+                                                    </a>
+                                                </div>
+                                                <div class="text_content">
+                                                    <div class="block_container_own">
+                                                        <div class="s_text_content">
+                                                            <h2>
+                                                            <a href="#" title="广州港珠澳大桥海事处救助一名重伤船员">广州港珠澳大桥海事处救助一名重伤船员
+                                                            </a>
+                                                            </h2>
+                                                        </div>
+                                                        <div class="news_form">
+                                                            <span class="src_net"><a href="">新浪新闻</a></span>
+                                                            <span class="src_time">08-30 19:16</span>
+                                                            <span class="hot_point">热点</span>
+                                                            <div class="dubbtn"></div>
+                                                        </div>
+                                                    </div>
+                                                    <span class="noinst">
+                                                        不敢兴趣
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="news_item news_two">
+                                                <div class="text_content">
+                                                    <div class="block_container_own">
+                                                        <div class="s_text_content">
+                                                            <h2>
+                                                            <a href="#" title="广州港珠澳大桥海事处救助一名重伤船员">广州港珠澳大桥海事处救助一名重伤船员
+                                                            </a>
+                                                            </h2>
+                                                        </div>
+                                                        <div class="news_form">
+                                                            <span class="src_net"><a href="">新浪新闻</a></span>
+                                                            <span class="src_time">08-30 19:16</span>
+                                                            <span class="hot_point">热点</span>
+                                                            <div class="dubbtn"></div>
+                                                        </div>
+                                                    </div>
+                                                    <span class="noinst">
+                                                        不敢兴趣
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="news_item">
+                                                <div class="pic_content">
+                                                    <a href="">
+                                                        <img src="image/news1.jpg" height="119" width="179" alt="">
+                                                    </a>
+                                                </div>
+                                                <div class="text_content">
+                                                    <div class="block_container_own">
+                                                        <div class="s_text_content">
+                                                            <h2>
+                                                            <a href="#" title="广州港珠澳大桥海事处救助一名重伤船员">广州港珠澳大桥海事处救助一名重伤船员
+                                                            </a>
+                                                            </h2>
+                                                        </div>
+                                                        <div class="news_form">
+                                                            <span class="src_net"><a href="">新浪新闻</a></span>
+                                                            <span class="src_time">08-30 19:16</span>
+                                                            <span class="hot_point">热点</span>
+                                                            <div class="dubbtn"></div>
+                                                        </div>
+                                                    </div>
+                                                    <span class="noinst">
+                                                        不敢兴趣
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="s_contentnone s_content3">
+                            <div class="page_new">
+                                <div class="news_wrapper">
+                                    <div class="news_container_right">
+                                        <div class="news_lists">
+                                            <div class="list_title">
+                                                <div class="title-text"><a href="http://top.baidu.com/?fr=mhd_card" target="_blank">实时热点</a></div>
+                                                <a class="hot-refresh"> <span class="hot-refresh-icon"></span><span class="hot-refresh-text">换一换</span></a>
+                                            </div>
+                                            <ul class="list_content list_news_on">
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">航班提前起飞误机</a><span class="new-identity"></span></span>
+                                                </li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">马戏团虐待黑熊</a><span class="new-identity"></span></span>
+                                                </li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">纪晓岚和珅重聚</a><span class="new-identity"></span></span>
+                                                </li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">纪晓岚和珅重聚</a><span class="new-identity"></span></span>
+                                                </li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">纪晓岚和珅重聚</a><span class="new-identity"></span></span>
+                                                </li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">女子名下多九套房</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">张翰机场长腿吸睛</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content"> 清华老师被骗千万</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">张雨绮街边秀美腿</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">母女低价强买排骨</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">彭于晏探班吴京</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">杨慧首谈宋喆出轨</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">甄子丹示爱汪诗诗</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">张纪中妻子出轨</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">iPhone7曝光</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">傅园慧收贝尔战书</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">菲总统向中国求情</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">学生制火车站模型</a></span></li>
+                                            </ul>
+                                            <ul class="list_content">
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">母女低价强买排骨</a><span class="new-identity"></span></span>
+                                                </li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">母女低价强买排骨</a><span class="new-identity"></span></span>
+                                                </li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">母女低价强买排骨</a><span class="new-identity"></span></span>
+                                                </li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">母女低价强买排骨</a><span class="new-identity"></span></span>
+                                                </li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">母女低价强买排骨</a><span class="new-identity"></span></span>
+                                                </li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">女子名下多九套房</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">张翰机场长腿吸睛</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content"> 清华老师被骗千万</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">张雨绮街边秀美腿</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">母女低价强买排骨</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">彭于晏探班吴京</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">杨慧首谈宋喆出轨</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">甄子丹示爱汪诗诗</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">张纪中妻子出轨</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">iPhone7曝光</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">傅园慧收贝尔战书</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">菲总统向中国求情</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">学生制火车站模型</a></span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="news_flash_tips">
+                                        <div class="left_line"></div>
+                                        <div class="tips_content">
+                                            <div class="tips_icon"></div>
+                                            <span>以下信息根据您的兴趣推荐</span>
+                                        </div>
+                                        <div class="right_line"></div>
+                                    </div>
+                                    <div class="news_container_left">
+                                        <div class="news_list_wrapper">
+                                            <div class="news_item news_two news_fisrt">
+                                                <div class="text_content">
+                                                    <div class="block_container_own">
+                                                        <div class="s_text_content">
+                                                            <h2>
+                                                            <a href="#" title="广州港珠澳大桥海事处救助一名重伤船员">广州港珠澳大桥海事处救助一名重伤船员
+                                                            </a>
+                                                            </h2>
+                                                        </div>
+                                                        <div class="news_form">
+                                                            <span class="src_net"><a href="">新浪新闻</a></span>
+                                                            <span class="src_time">08-30 19:16</span>
+                                                            <span class="hot_point">热点</span>
+                                                            <div class="dubbtn"></div>
+                                                        </div>
+                                                    </div>
+                                                    <span class="noinst">
+                                                        不敢兴趣
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="news_item news_two">
+                                                <div class="text_content">
+                                                    <div class="block_container_own">
+                                                        <div class="s_text_content">
+                                                            <h2>
+                                                            <a href="#" title="广州港珠澳大桥海事处救助一名重伤船员">广州港珠澳大桥海事处救助一名重伤船员
+                                                            </a>
+                                                            </h2>
+                                                        </div>
+                                                        <div class="news_form">
+                                                            <span class="src_net"><a href="">新浪新闻</a></span>
+                                                            <span class="src_time">08-30 19:16</span>
+                                                            <span class="hot_point">热点</span>
+                                                            <div class="dubbtn"></div>
+                                                        </div>
+                                                    </div>
+                                                    <span class="noinst">
+                                                        不敢兴趣
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="news_item">
+                                                <div class="pic_content">
+                                                    <a href="">
+                                                        <img src="image/news1.jpg" height="119" width="179" alt="">
+                                                    </a>
+                                                </div>
+                                                <div class="text_content">
+                                                    <div class="block_container_own">
+                                                        <div class="s_text_content">
+                                                            <h2>
+                                                            <a href="#" title="广州港珠澳大桥海事处救助一名重伤船员">广州港珠澳大桥海事处救助一名重伤船员
+                                                            </a>
+                                                            </h2>
+                                                        </div>
+                                                        <div class="news_form">
+                                                            <span class="src_net"><a href="">新浪新闻</a></span>
+                                                            <span class="src_time">08-30 19:16</span>
+                                                            <span class="hot_point">热点</span>
+                                                            <div class="dubbtn"></div>
+                                                        </div>
+                                                    </div>
+                                                    <span class="noinst">
+                                                        不敢兴趣
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="s_contentnone s_content4">
+                            <div class="page_new">
+                                <div class="news_wrapper">
+                                    <div class="news_container_right">
+                                        <div class="news_lists">
+                                            <div class="list_title">
+                                                <div class="title-text"><a href="http://top.baidu.com/?fr=mhd_card" target="_blank">实时热点</a></div>
+                                                <a class="hot-refresh"> <span class="hot-refresh-icon"></span><span class="hot-refresh-text">换一换</span></a>
+                                            </div>
+                                            <ul class="list_content list_news_on">
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">航班提前起飞误机</a><span class="new-identity"></span></span>
+                                                </li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">马戏团虐待黑熊</a><span class="new-identity"></span></span>
+                                                </li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">纪晓岚和珅重聚</a><span class="new-identity"></span></span>
+                                                </li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">纪晓岚和珅重聚</a><span class="new-identity"></span></span>
+                                                </li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">纪晓岚和珅重聚</a><span class="new-identity"></span></span>
+                                                </li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">女子名下多九套房</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">张翰机场长腿吸睛</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content"> 清华老师被骗千万</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">张雨绮街边秀美腿</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">母女低价强买排骨</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">彭于晏探班吴京</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">杨慧首谈宋喆出轨</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">甄子丹示爱汪诗诗</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">张纪中妻子出轨</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">iPhone7曝光</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">傅园慧收贝尔战书</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">菲总统向中国求情</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">学生制火车站模型</a></span></li>
+                                            </ul>
+                                            <ul class="list_content">
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">纪晓岚和珅重聚</a><span class="new-identity"></span></span>
+                                                </li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">纪晓岚和珅重聚</a><span class="new-identity"></span></span>
+                                                </li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">纪晓岚和珅重聚</a><span class="new-identity"></span></span>
+                                                </li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">纪晓岚和珅重聚</a><span class="new-identity"></span></span>
+                                                </li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">纪晓岚和珅重聚</a><span class="new-identity"></span></span>
+                                                </li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">女子名下多九套房</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">张翰机场长腿吸睛</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content"> 清华老师被骗千万</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">张雨绮街边秀美腿</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">母女低价强买排骨</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">彭于晏探班吴京</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">杨慧首谈宋喆出轨</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">甄子丹示爱汪诗诗</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">张纪中妻子出轨</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">iPhone7曝光</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">傅园慧收贝尔战书</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">菲总统向中国求情</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">学生制火车站模型</a></span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="news_flash_tips">
+                                        <div class="left_line"></div>
+                                        <div class="tips_content">
+                                            <div class="tips_icon"></div>
+                                            <span>以下信息根据您的兴趣推荐</span>
+                                        </div>
+                                        <div class="right_line"></div>
+                                    </div>
+                                    <div class="news_container_left">
+                                        <div class="news_list_wrapper">
+                                            <div class="news_item news_fisrt">
+                                                <div class="pic_content">
+                                                    <a href="">
+                                                        <img src="image/news1.jpg" height="119" width="179" alt="">
+                                                    </a>
+                                                </div>
+                                                <div class="text_content">
+                                                    <div class="block_container_own">
+                                                        <div class="s_text_content">
+                                                            <h2>
+                                                            <a href="#" title="广州港珠澳大桥海事处救助一名重伤船员">广州港珠澳大桥海事处救助一名重伤船员
+                                                            </a>
+                                                            </h2>
+                                                        </div>
+                                                        <div class="news_form">
+                                                            <span class="src_net"><a href="">新浪新闻</a></span>
+                                                            <span class="src_time">08-30 19:16</span>
+                                                            <span class="hot_point">热点</span>
+                                                            <div class="dubbtn"></div>
+                                                        </div>
+                                                    </div>
+                                                    <span class="noinst">
+                                                        不敢兴趣
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="news_item">
+                                                <div class="pic_content">
+                                                    <a href="">
+                                                        <img src="image/news1.jpg" height="119" width="179" alt="">
+                                                    </a>
+                                                </div>
+                                                <div class="text_content">
+                                                    <div class="block_container_own">
+                                                        <div class="s_text_content">
+                                                            <h2>
+                                                            <a href="#" title="广州港珠澳大桥海事处救助一名重伤船员">广州港珠澳大桥海事处救助一名重伤船员
+                                                            </a>
+                                                            </h2>
+                                                        </div>
+                                                        <div class="news_form">
+                                                            <span class="src_net"><a href="">新浪新闻</a></span>
+                                                            <span class="src_time">08-30 19:16</span>
+                                                            <span class="hot_point">热点</span>
+                                                            <div class="dubbtn"></div>
+                                                        </div>
+                                                    </div>
+                                                    <span class="noinst">
+                                                        不敢兴趣
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="news_item">
+                                                <div class="pic_content">
+                                                    <a href="">
+                                                        <img src="image/news1.jpg" height="119" width="179" alt="">
+                                                    </a>
+                                                </div>
+                                                <div class="text_content">
+                                                    <div class="block_container_own">
+                                                        <div class="s_text_content">
+                                                            <h2>
+                                                            <a href="#" title="广州港珠澳大桥海事处救助一名重伤船员">广州港珠澳大桥海事处救助一名重伤船员
+                                                            </a>
+                                                            </h2>
+                                                        </div>
+                                                        <div class="news_form">
+                                                            <span class="src_net"><a href="">新浪新闻</a></span>
+                                                            <span class="src_time">08-30 19:16</span>
+                                                            <span class="hot_point">热点</span>
+                                                            <div class="dubbtn"></div>
+                                                        </div>
+                                                    </div>
+                                                    <span class="noinst">
+                                                        不敢兴趣
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="s_contentnone s_content5">
+                            <div class="page_new">
+                                <div class="news_wrapper">
+                                    <div class="news_container_right">
+                                        <div class="news_lists">
+                                            <div class="list_title">
+                                                <div class="title-text"><a href="http://top.baidu.com/?fr=mhd_card" target="_blank">实时热点</a></div>
+                                                <a class="hot-refresh"> <span class="hot-refresh-icon"></span><span class="hot-refresh-text">换一换</span></a>
+                                            </div>
+                                            <ul class="list_content list_news_on">
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">航班提前起飞误机</a><span class="new-identity"></span></span>
+                                                </li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">马戏团虐待黑熊</a><span class="new-identity"></span></span>
+                                                </li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">纪晓岚和珅重聚</a><span class="new-identity"></span></span>
+                                                </li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">纪晓岚和珅重聚</a><span class="new-identity"></span></span>
+                                                </li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">纪晓岚和珅重聚</a><span class="new-identity"></span></span>
+                                                </li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">女子名下多九套房</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">张翰机场长腿吸睛</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content"> 清华老师被骗千万</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">张雨绮街边秀美腿</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">母女低价强买排骨</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">彭于晏探班吴京</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">杨慧首谈宋喆出轨</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">甄子丹示爱汪诗诗</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">张纪中妻子出轨</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">iPhone7曝光</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">傅园慧收贝尔战书</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">菲总统向中国求情</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">学生制火车站模型</a></span></li>
+                                            </ul>
+                                            <ul class="list_content">
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">马戏团虐待黑熊</a><span class="new-identity"></span></span>
+                                                </li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">马戏团虐待黑熊</a><span class="new-identity"></span></span>
+                                                </li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">马戏团虐待黑熊</a><span class="new-identity"></span></span>
+                                                </li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">马戏团虐待黑熊</a><span class="new-identity"></span></span>
+                                                </li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">马戏团虐待黑熊</a><span class="new-identity"></span></span>
+                                                </li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">马戏团虐待黑熊</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">张翰机场长腿吸睛</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content"> 清华老师被骗千万</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">张雨绮街边秀美腿</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">母女低价强买排骨</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">彭于晏探班吴京</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">杨慧首谈宋喆出轨</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">甄子丹示爱汪诗诗</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">张纪中妻子出轨</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">iPhone7曝光</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">傅园慧收贝尔战书</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">菲总统向中国求情</a></span></li>
+                                                <li class="lists_item"><span class="list_news_title"><a href="#" class="list_title_content">学生制火车站模型</a></span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="news_flash_tips">
+                                        <div class="left_line"></div>
+                                        <div class="tips_content">
+                                            <div class="tips_icon"></div>
+                                            <span>以下信息根据您的兴趣推荐</span>
+                                        </div>
+                                        <div class="right_line"></div>
+                                    </div>
+                                    <div class="news_container_left">
+                                        <div class="news_list_wrapper">
+                                            <div class="news_item news_two news_fisrt">
+                                                <div class="text_content">
+                                                    <div class="block_container_own">
+                                                        <div class="s_text_content">
+                                                            <h2>
+                                                            <a href="#" title="广州港珠澳大桥海事处救助一名重伤船员">广州港珠澳大桥海事处救助一名重伤船员
+                                                            </a>
+                                                            </h2>
+                                                        </div>
+                                                        <div class="news_form">
+                                                            <span class="src_net"><a href="">新浪新闻</a></span>
+                                                            <span class="src_time">08-30 19:16</span>
+                                                            <span class="hot_point">热点</span>
+                                                            <div class="dubbtn"></div>
+                                                        </div>
+                                                    </div>
+                                                    <span class="noinst">
+                                                        不敢兴趣
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="news_item news_two">
+                                                <div class="text_content">
+                                                    <div class="block_container_own">
+                                                        <div class="s_text_content">
+                                                            <h2>
+                                                            <a href="#" title="广州港珠澳大桥海事处救助一名重伤船员">广州港珠澳大桥海事处救助一名重伤船员
+                                                            </a>
+                                                            </h2>
+                                                        </div>
+                                                        <div class="news_form">
+                                                            <span class="src_net"><a href="">新浪新闻</a></span>
+                                                            <span class="src_time">08-30 19:16</span>
+                                                            <span class="hot_point">热点</span>
+                                                            <div class="dubbtn"></div>
+                                                        </div>
+                                                    </div>
+                                                    <span class="noinst">
+                                                        不敢兴趣
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="news_item news_two">
+                                                <div class="text_content">
+                                                    <div class="block_container_own">
+                                                        <div class="s_text_content">
+                                                            <h2>
+                                                            <a href="#" title="广州港珠澳大桥海事处救助一名重伤船员">广州港珠澳大桥海事处救助一名重伤船员
+                                                            </a>
+                                                            </h2>
+                                                        </div>
+                                                        <div class="news_form">
+                                                            <span class="src_net"><a href="">新浪新闻</a></span>
+                                                            <span class="src_time">08-30 19:16</span>
+                                                            <span class="hot_point">热点</span>
+                                                            <div class="dubbtn"></div>
+                                                        </div>
+                                                    </div>
+                                                    <span class="noinst">
+                                                        不敢兴趣
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-feed">
+                        <div class="to-top">
+                            <div class="icon-mask">
+                                <div class="text"> 回到顶部 </div>
+                            </div>
+                            <span class="icon"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- tab部分 -->
+            <!-- 登录后的footer -->
+            <div class="loginfooter">
+                <div>
+                    <p class="lh">
+                        <a class="sethome"> 设为首页 </a>
+                    </p>
+                    <span class="copyright_text">
+                    <span>©2016&nbsp;Baidu&nbsp;</span>
+                    <a href="#">使用百度前必读</a>&nbsp;<a href="#">意见反馈</a>&nbsp;<span>京ICP证030173号&nbsp;</span><img width="13" height="16" src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/copy_rignt_24.png"> </span>
+                </div>
+                <div class="recordcode"><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11000002000001" target="_blank"><i></i>京公网安备11000002000001号</a></div>
+            </div>
+            <!-- 登录后的footer -->
+            <!-- footer -->
+            <footer class="footer footernone">
+                <div id="foot">
+                    <div>
+                        <a href="#">
+                            <i class="icomoon userserive">&#xe90a;</i>用户反馈</a>
+                    </div>
+                    <a id="index-copyright" href="//www.baidu.com/duty/">使用百度前必读&nbsp;Baidu&nbsp;京ICP证030173号</a>
+                    <a class="recordcode" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11000002000001" target="_blank"><i>
+                </i>京公网安备11000002000001号</a>
+                </div>
+                <div class="fotconter">
+                    <div class="codepart">
+                        <div class="code1">
+                            <div class="codeimg1">
+                            </div>
+                            <div class="codetext">
+                                <p><b>手机百度</b></p>
+                                <p><span> 快人一步</span></p>
+                            </div>
+                        </div>
+                        <div class="code2">
+                            <div class="codeimg2">
+                            </div>
+                            <div class="codetext">
+                                <p><b>百度糯米</b></p>
+                                <p><span>一元大餐</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aboutpart">
+                        <p class="about">
+                            <a href="https://www.baidu.com/cache/sethelp/help.html" target="_blank" class="a_set">把百度设为主页</a>
+                            <a href="http://home.baidu.com/">关于百度</a>
+                            <a href="http://ir.baidu.com/phoenix.zhtml?c=188488&p=irol-irhome">About&nbsp;&nbsp;Baidu</a>
+                        </p>
+                        <p class="ICP">
+                            ©2016&nbsp;Baidu&nbsp;<a href="https://www.baidu.com/duty/" class="a_set">使用百度前必读&nbsp;</a><a href="http://jianyi.baidu.com/" class="a_set">意见反馈</a>&nbsp;京ICP证030173号&nbsp;<i class="icp_logo"></i>
+                        </p>
+                        <p class="netploic">
+                            <i class="ijg_logo"></i> 京公网安备11000002000001号
+                        </p>
+                    </div>
+                </div>
+            </footer>
+            <!-- footer end  -->
+        </div>
+    </div>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="bulid/all.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>右边部分</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="shortcut icon" href="http:/www.baidu.com/favicon.ico" type="image/x-icon">
+    <link href="css/index.css" rel="stylesheet">
+    <style>
+    blockquote,
+    body,
+    button,
+    dd,
+    dl,
+    dt,
+    fieldset,
+    figure,
+    form,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    input,
+    legend,
+    li,
+    ol,
+    p,
+    pre,
+    select,
+    td,
+    textarea,
+    th,
+    ul {
+        box-sizing: border-box;
+        font-family: Verdana, "Lantinghei SC", "Hiragino Sans GB", "Microsoft Yahei", Helvetica, arial, 宋体, sans-serif;
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    .wrap_1000 {
+        width: 1000px;
+        margin: 0 auto;
+        margin-top: 20px
+    }
+    
+    .main {
+        width: 776px;
+        float: right;
+    }
+    
+    .tagGather>.bd {
+        color: #666;
+        font-size: 12px;
+        line-height: 1.5;
+    }
+    
+    .sort {
+        position: relative;
+        z-index: 500;
+    }
+    
+    .sort>.wrap {
+        box-sizing: content-box;
+        height: 38px;
+        background: #fff;
+        color: gray;
+        line-height: 38px;
+    }
+    
+    .sort .sortMode {
+        overflow: visible;
+        float: left;
+        height: 38px;
+    }
+    
+    .sort .sortMode h3 {
+        float: left;
+        padding: 0 21px;
+        background: #fff;
+        border-right: 1px solid #f5f5f5;
+        font-size: 12px;
+        font-weight: 400;
+        cursor: default;
+    }
+    
+    .sort .sortMode>dl {
+        position: relative;
+        z-index: 10;
+        overflow: hidden;
+        float: left;
+        height: 36px;
+        margin: 0 1px 0 -1px;
+        white-space: nowrap;
+    }
+    
+    .sort .sortMode dt {
+        padding: 0 18px;
+        cursor: default;
+    }
+    
+    .sort .sortMode dt>.arrow {
+        position: relative;
+        display: inline-block;
+        margin-left: 5px;
+        font-style: normal;
+    }
+    
+    .sort .sortMode dt>.arrow:after,
+    .sort .sortMode dt>.arrow:before {
+        display: block;
+        width: 0!important;
+        height: 0!important;
+        padding: 0!important;
+        font-size: 0!important;
+        line-height: 0!important;
+        border: 5px solid transparent;
+        border-bottom-width: 0;
+        border-top-color: gray;
+        content: " ";
+    }
+    
+    .sort .sortMode dt>.arrow:after {
+        position: absolute;
+        left: 1px;
+        bottom: 1px;
+        border-width: 4px;
+        border-bottom-width: 0;
+        border-top-color: #fff;
+    }
+    
+    .sort .sortMode dd {
+        position: relative;
+        z-index: 12;
+        visibility: hidden;
+        opacity: 0;
+        -webkit-transition: all .1s ease .1s;
+        -moz-transition: all .1s ease .1s;
+        -ms-transition: all .1s ease .1s;
+        transition: all .1s ease .1s;
+    }
+    
+    .sort .sortMode dd a {
+        display: block;
+        padding: 0 32px 0 17px;
+        font-weight: 500;
+        color: gray;
+    }
+    
+    .sort .sortMode>dl:hover {
+        height: auto;
+        overflow: visible;
+        background: #fff;
+        border: 1px solid #e4e4e4;
+        border-width: 0 1px 1px;
+        -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, .1);
+        box-shadow: 1px 1px 4px rgba(0, 0, 0, .1);
+    }
+    
+    .sort .sortMode>dl:hover dt {
+        padding: 0 17px;
+    }
+    
+    .sort .sortMode>dl:hover dd {
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    .sort .sortMode dd a:hover {
+        color: #35B558;
+    }
+    
+    .sort .previewMode {
+        float: right;
+    }
+    
+    .previewMode li {
+        position: relative;
+        float: left;
+        width: 36px;
+        height: 38px;
+        border-left: 1px solid #f5f5f5;
+        line-height: 36px;
+        text-align: center;
+        cursor: pointer;
+        -webkit-transition: background-color .2s;
+        -moz-transition: background-color .2s;
+        -ms-transition: background-color .2s;
+        transition: background-color .2s;
+    }
+    
+    .previewMode li .icon {
+        position: relative;
+        top: -1px;
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        vertical-align: middle;
+        background: url(http://s1.jikexueyuan.com/course/images/preview-icon_2ae2eb9.png) no-repeat 0 0;
+    }
+    
+    .previewMode li.kuai-icon .icon {
+        width: 14px;
+        background: url(http://s1.jikexueyuan.com/course/images/icon-kuai_3c1a8cf.png) no-repeat 0 0;
+        background-size: 14px;
+    }
+    
+    .previewMode li.list-icon .icon {
+        width: 19px;
+        background: url(http://s1.jikexueyuan.com/course/images/icon-list_6d9f87f.png) no-repeat center;
+        background-size: 16px 12px;
+    }
+    
+    .lesson-list ul {
+        width: auto;
+        width: 790px;
+        margin-top: 15px;
+    }
+    
+    .lesson-list ul li {
+        width: 250px;
+        height: 225px;
+        float: left;
+        margin-right: 13px;
+        margin-bottom: 13px;
+    }
+    
+    .tagGather .lesson-list li:nth-child(3n+3) {
+        margin-right: 0;
+    }
+    
+    .lesson-list .lessonimg-box {
+        width: 100%;
+        height: 135px;
+        position: relative;
+    }
+    
+    .lesson-list .lesson-shoucang {
+        display: none;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 16px;
+        height: 16px;
+        background: url(http://s1.jikexueyuan.com/common/images/shoucang-1_76dc56f.png);
+        background-size: 16px 16px;
+        z-index: 101;
+        cursor: pointer;
+    }
+    
+    .lesson-list .lessonimg-box .lessonimg {
+        width: 100%;
+        height: 135px;
+    }
+    
+    .lesson-list .lessonplay {
+        background: #000;
+        background: rgba(0, 0, 0, .4);
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+    }
+    
+    .lesson-list .lessonplay .playericon {
+        position: absolute;
+        z-index: 120;
+        width: 50px;
+        height: 50px;
+        display: block;
+        left: 50%;
+        margin-left: -25px;
+        top: 50%;
+        margin-top: -25px;
+        background: url(http://s1.jikexueyuan.com/common/images/player_icon_5c67475.png) 0 0 no-repeat;
+        cursor: pointer;
+        background-size: 50px 50px;
+    }
+    
+    .lesson-list .lesson-infor {
+        padding: 10px;
+        position: relative;
+        z-index: 200;
+        height: 88px;
+        overflow: hidden;
+        background: #fff;
+    }
+    
+    .lesson-list .lesson-infor .lesson-info-h2,
+    .lesson-list .lesson-infor h5 {
+        font-size: 14px;
+        color: #333;
+        line-height: 18px;
+        margin-bottom: 12px;
+        height: 36px;
+        overflow: hidden;
+    }
+    
+    .lesson-list .lesson-infor p {
+        color: gray;
+        font-size: 12px;
+        line-height: 18px;
+        height: 0;
+        overflow: hidden;
+        opacity: 0;
+        margin-bottom: 10px;
+        display: none;
+    }
+    
+    .lesson-list .lesson-infor .timeandicon {
+        font-size: 12px;
+        color: gray;
+        position: relative;
+    }
+    
+    .lesson-list .lesson-infor .timeandicon dl {
+        width: 120px;
+        float: left;
+        white-space: nowrap;
+    }
+    
+    .timeandicon dl dd {
+        font-size: 12px;
+        float: left;
+        display: inline-block;
+        margin-right: 15px;
+    }
+    
+    .mar-b8 {
+        margin-bottom: 8px;
+        font-style: normal;
+    }
+    
+    em {
+        font-style: normal;
+    }
+    
+    .lesson-list .lesson-shoucang:hover {
+        background: url(http://s1.jikexueyuan.com/common/images/shoucang-2_3d597dc.png);
+        background-size: 16px 16px;
+    }
+    
+    .lesson-list .lesson-hover {
+        height: 175px;
+        background: #fff;
+        -webkit-animation: menuhover 0.15s ease-in;
+        -moz-animation: menuhover 0.15s ease-in;
+        -o-animation: menuhover 0.15s ease-in;
+        -animation: menuhover 0.15s ease-in;
+        animation-fill-mode: forwards;
+        -moz-animation-fill-mode: forwards;
+        -o-animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+    }
+    
+    @-moz-keyframes menuhover {
+        0% {
+            height: 88px;
+        }
+        100% {
+            height: 175px;
+        }
+    }
+    
+    @-webkit-keyframes menuhover {
+        0% {
+            height: 88px;
+        }
+        100% {
+            height: 175px;
+        }
+    }
+    
+    @-o-keyframes menuhover {
+        0% {
+            height: 88px;
+        }
+        100% {
+            height: 175px;
+        }
+    }
+    
+    @keyframes menuhover {
+        0% {
+            height: 88px;
+        }
+        100% {
+            height: 175px;
+        }
+    }
+    
+    .lesson-list .lesson-out {
+        height: 88px;
+        background: #fff;
+        -webkit-animation: menuout 0.15s ease-in;
+        -moz-animation: menuout 0.15s ease-in;
+        -o-animation: menuout 0.15s ease-in;
+        -animation: menuout 0.15s ease-in;
+        animation-fill-mode: forwards;
+        -moz-animation-fill-mode: forwards;
+        -o-animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+    }
+    
+    @-moz-keyframes menuout {
+        100% {
+            height: 88px;
+        }
+        0% {
+            height: 175px;
+        }
+    }
+    
+    @-webkit-keyframes menuout {
+        100% {
+            height: 88px;
+        }
+        0% {
+            height: 175px;
+        }
+    }
+    
+    @-o-keyframes menuout {
+        100% {
+            height: 88px;
+        }
+        0% {
+            height: 175px;
+        }
+    }
+    
+    @keyframes menuout {
+        100% {
+            height: 88px;
+        }
+        0% {
+            height: 175px;
+        }
+    }
+    
+    .lesson-list .lesson-infor .timeandicon .time-icon {
+        background: url(http://s1.jikexueyuan.com/common/images/clok_a413ecf.png) 0 0 no-repeat;
+        width: 14px;
+        height: 14px;
+        display: block;
+        float: left;
+        margin-right: 8px;
+        background-size: 14px 14px;
+    }
+    
+    .lesson-list .lesson-infor .timeandicon dl dd {
+        font-size: 12px;
+    }
+    
+    .lesson-list .lesson-infor .zhongji {
+        display: none;
+    }
+    
+    .lesson-list .lesson-infor .timeandicon .learn-number {
+        float: right;
+        display: none;
+    }
+    
+    .cf:after {
+        content: '';
+        display: block;
+        clear: both;
+        height: 0;
+        overflow: hidden;
+        visibility: hidden;
+    }
+    
+    .lesson-list .lesson-infor .lessonicon-box {
+        position: absolute;
+        right: 0;
+        text-align: right;
+        bottom: 4px;
+    }
+    
+    .lesson-infor .timeandicon .xinhao-icon {
+        background: url(http://s1.jikexueyuan.com/common/images/one-ji_1731712.png) 0 0 no-repeat;
+        background-size: 14px 14px;
+        width: 14px;
+        height: 14px;
+        display: block;
+        float: left;
+        margin-right: 8px;
+    }
+    </style>
+</head>
+<script src="js/jquery.js"></script>
+<script>
+$(document).ready(function() {
+    $(".lesson-list").find('.cf').find("li").mouseover(function() {
+        $(this).find(".lesson-shoucang").show();
+        $(this).find(".lessonplay").css("opacity", "1");
+        $(this).find(".lesson-infor").removeClass("lesson-out");
+
+        $(this).find(".lesson-infor").addClass("lesson-hover");
+        $(this).find(".lesson-infor").find('p').css({
+            "height": "52px",
+            "opacity": "1",
+            "display": "block"
+        });
+        $(this).find(".zhongji").show();
+        $(this).find(".learn-number").show();
+    });
+    $(".lesson-list").find('.cf').find("li").mouseout(function() {
+        $(this).find(".lesson-shoucang").hide();
+        $(this).find(".lessonplay").css("opacity", "0")
+
+        $(this).find(".lesson-infor").find('p').css({
+            "height": "0",
+            "opacity": "0",
+            "display": "none"
+        });
+        $(this).find(".zhongji").hide();
+        $(this).find(".learn-number").hide();
+        $(this).find(".lesson-infor").removeClass("lesson-hover");
+        $(this).find(".lesson-infor").addClass("lesson-out");
+    })
+})
+</script>
+
+<body>
+    <div class="page">
+        <div class="contain">
+            <div class="wrap_1000">
+                <div class="main">
+                    <div class="tagGather">
+                        <div class="bd">
+                            <div class="listbox">
+                                <!-- sort -->
+                                <div class="sort">
+                                    <div class="wrap">
+                                        <div class="sortMode">
+                                            <h3>全部课程</h3>
+                                            <dl>
+                                                <dt><span class="type-title-one">最新</span><i class="arrow"></i></dt>
+                                                <dd>
+                                                    <p class="lesson-new">
+                                                        <a href="#" ref="nofollow">最新</a>
+                                                    </p>
+                                                    <p class="lesson-new">
+                                                        <a href="#" ref="nofollow">最热</a>
+                                                    </p>
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt><span class="type-title-tow">课程类型</span><i class="arrow"></i></dt>
+                                                <dd>
+                                                    <p class="lesson-detailed">
+                                                        <a href="http://www.jikexueyuan.com/course/all/1-0-0-1/" ref="nofollow">VIP</a>
+                                                    </p>
+                                                    <p class="lesson-detailed">
+                                                        <a href="http://www.jikexueyuan.com/course/all/1-0-0-2/" ref="nofollow">免费</a>
+                                                    </p>
+                                                    <p class="lesson-detailed">
+                                                        <a href="http://www.jikexueyuan.com/course/all/1-0-0-3/" ref="nofollow">认证专享</a>
+                                                    </p>
+                                                    <p class="lesson-all">
+                                                        <a href="http://www.jikexueyuan.com/course/all/1-0-0-0/" ref="nofollow">全部</a>
+                                                    </p>
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt><span class="type-title-tow">内容类型</span><i class="arrow"></i></dt>
+                                                <dd>
+                                                    <p class="lesson-detailed">
+                                                        <a href="http://www.jikexueyuan.com/course/all/1-0-1-0/" ref="nofollow">知识精讲</a>
+                                                    </p>
+                                                    <p class="lesson-detailed">
+                                                        <a href="http://www.jikexueyuan.com/course/all/1-0-3-0/" ref="nofollow">项目实战</a>
+                                                    </p>
+                                                    <p class="lesson-all">
+                                                        <a href="http://www.jikexueyuan.com/course/all/1-0-0-0/" ref="nofollow">全部</a>
+                                                    </p>
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt><span class="type-title-three">难度等级</span><i class="arrow"></i></dt>
+                                                <dd>
+                                                    <p class="level-one">
+                                                        <a href="http://www.jikexueyuan.com/course/all/1-1-0-0/" ref="nofollow">初级</a>
+                                                    </p>
+                                                    <p class="level-one">
+                                                        <a href="http://www.jikexueyuan.com/course/all/1-3-0-0/" ref="nofollow">中级</a>
+                                                    </p>
+                                                    <p class="level-one">
+                                                        <a href="http://www.jikexueyuan.com/course/all/1-5-0-0/" ref="nofollow">高级</a>
+                                                    </p>
+                                                    <p class="level-all">
+                                                        <a href="http://www.jikexueyuan.com/course/all/1-0-0-0/" ref="nofollow"> 全部 </a>
+                                                    </p>
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                        <div class="previewMode">
+                                            <ul>
+                                                <li class="kuai-icon curr"><i class="icon"></i>
+                                                </li>
+                                                <li class="list-icon"><i class="icon"></i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- sort end-->
+                                <!-- lesson-list -->
+                                <div class="lesson-list">
+                                    <ul class="cf">
+                                        <li>
+                                            <div class="lessonimg-box">
+                                                <i class="lesson-shoucang"></i>
+                                                <a href="http://www.jikexueyuan.com/course/2899.html">
+                                                    <img src="http://a1.jikexueyuan.com/home/201608/02/ed26/579fc9a46964e.jpg" class="lessonimg" alt="LeMaker Guitar 官方 LeMuntu 系统体验">
+                                                    <div class="lessonplay">
+                                                        <i class="playericon"></i>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="lesson-infor">
+                                                <h2 class="lesson-info-h2"><a href="#" >LeMaker Guitar 官方 LeMuntu 系统体验</a></h2>
+                                                <p>
+                                                    本课程主要介绍 LeMaker Guitar 官方的 Linux 操作系统 LeMuntu 该如何使用，以及如何配置主要的接口，为后期更深入的 Linux 系统开发和学习奠定基础。
+                                                </p>
+                                                <div class="timeandicon">
+                                                    <div class="cf">
+                                                        <dl>
+                                                            <dd class="mar-b8"><i class="time-icon"></i><em>4课时
+							9分钟</em>
+                                                            </dd>
+                                                            <dd class="zhongji">
+                                                                <i class="xinhao-icon"></i><em>初级</em>
+                                                            </dd>
+                                                        </dl>
+                                                        <em class="learn-number">2891人学习</em>
+                                                    </div>
+                                                    <div class="cf">
+                                                        <div class="lessonicon-box">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="lessonimg-box">
+                                                <i class="lesson-shoucang"></i>
+                                                <a href="http://www.jikexueyuan.com/course/2899.html">
+                                                    <img src="http://a1.jikexueyuan.com/home/201608/02/ed26/579fc9a46964e.jpg" class="lessonimg" alt="LeMaker Guitar 官方 LeMuntu 系统体验">
+                                                    <div class="lessonplay">
+                                                        <i class="playericon"></i>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="lesson-infor">
+                                                <h2 class="lesson-info-h2"><a href="#" >LeMaker Guitar 官方 LeMuntu 系统体验</a></h2>
+                                                <p>
+                                                    本课程主要介绍 LeMaker Guitar 官方的 Linux 操作系统 LeMuntu 该如何使用，以及如何配置主要的接口，为后期更深入的 Linux 系统开发和学习奠定基础。
+                                                </p>
+                                                <div class="timeandicon">
+                                                    <div class="cf">
+                                                        <dl>
+                                                            <dd class="mar-b8"><i class="time-icon"></i><em>4课时
+							9分钟</em>
+                                                            </dd>
+                                                            <dd class="zhongji">
+                                                                <i class="xinhao-icon"></i><em>初级</em>
+                                                            </dd>
+                                                        </dl>
+                                                        <em class="learn-number">2891人学习</em>
+                                                    </div>
+                                                    <div class="cf">
+                                                        <div class="lessonicon-box">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="lessonimg-box">
+                                                <i class="lesson-shoucang"></i>
+                                                <a href="http://www.jikexueyuan.com/course/2899.html">
+                                                    <img src="http://a1.jikexueyuan.com/home/201608/02/ed26/579fc9a46964e.jpg" class="lessonimg" alt="LeMaker Guitar 官方 LeMuntu 系统体验">
+                                                    <div class="lessonplay">
+                                                        <i class="playericon"></i>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="lesson-infor">
+                                                <h2 class="lesson-info-h2"><a href="#" >LeMaker Guitar 官方 LeMuntu 系统体验</a></h2>
+                                                <p>
+                                                    本课程主要介绍 LeMaker Guitar 官方的 Linux 操作系统 LeMuntu 该如何使用，以及如何配置主要的接口，为后期更深入的 Linux 系统开发和学习奠定基础。
+                                                </p>
+                                                <div class="timeandicon">
+                                                    <div class="cf">
+                                                        <dl>
+                                                            <dd class="mar-b8"><i class="time-icon"></i><em>4课时
+							9分钟</em>
+                                                            </dd>
+                                                            <dd class="zhongji">
+                                                                <i class="xinhao-icon"></i><em>初级</em>
+                                                            </dd>
+                                                        </dl>
+                                                        <em class="learn-number">2891人学习</em>
+                                                    </div>
+                                                    <div class="cf">
+                                                        <div class="lessonicon-box">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="lessonimg-box">
+                                                <i class="lesson-shoucang"></i>
+                                                <a href="http://www.jikexueyuan.com/course/2899.html">
+                                                    <img src="http://a1.jikexueyuan.com/home/201608/02/ed26/579fc9a46964e.jpg" class="lessonimg" alt="LeMaker Guitar 官方 LeMuntu 系统体验">
+                                                    <div class="lessonplay">
+                                                        <i class="playericon"></i>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="lesson-infor">
+                                                <h2 class="lesson-info-h2"><a href="#" >LeMaker Guitar 官方 LeMuntu 系统体验</a></h2>
+                                                <p>
+                                                    本课程主要介绍 LeMaker Guitar 官方的 Linux 操作系统 LeMuntu 该如何使用，以及如何配置主要的接口，为后期更深入的 Linux 系统开发和学习奠定基础。
+                                                </p>
+                                                <div class="timeandicon">
+                                                    <div class="cf">
+                                                        <dl>
+                                                            <dd class="mar-b8"><i class="time-icon"></i><em>4课时
+							9分钟</em>
+                                                            </dd>
+                                                            <dd class="zhongji">
+                                                                <i class="xinhao-icon"></i><em>初级</em>
+                                                            </dd>
+                                                        </dl>
+                                                        <em class="learn-number">2891人学习</em>
+                                                    </div>
+                                                    <div class="cf">
+                                                        <div class="lessonicon-box">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="lessonimg-box">
+                                                <i class="lesson-shoucang"></i>
+                                                <a href="http://www.jikexueyuan.com/course/2899.html">
+                                                    <img src="http://a1.jikexueyuan.com/home/201608/02/ed26/579fc9a46964e.jpg" class="lessonimg" alt="LeMaker Guitar 官方 LeMuntu 系统体验">
+                                                    <div class="lessonplay">
+                                                        <i class="playericon"></i>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="lesson-infor">
+                                                <h2 class="lesson-info-h2"><a href="#" >LeMaker Guitar 官方 LeMuntu 系统体验</a></h2>
+                                                <p>
+                                                    本课程主要介绍 LeMaker Guitar 官方的 Linux 操作系统 LeMuntu 该如何使用，以及如何配置主要的接口，为后期更深入的 Linux 系统开发和学习奠定基础。
+                                                </p>
+                                                <div class="timeandicon">
+                                                    <div class="cf">
+                                                        <dl>
+                                                            <dd class="mar-b8"><i class="time-icon"></i><em>4课时
+							9分钟</em>
+                                                            </dd>
+                                                            <dd class="zhongji">
+                                                                <i class="xinhao-icon"></i><em>初级</em>
+                                                            </dd>
+                                                        </dl>
+                                                        <em class="learn-number">2891人学习</em>
+                                                    </div>
+                                                    <div class="cf">
+                                                        <div class="lessonicon-box">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="lessonimg-box">
+                                                <i class="lesson-shoucang"></i>
+                                                <a href="http://www.jikexueyuan.com/course/2899.html">
+                                                    <img src="http://a1.jikexueyuan.com/home/201608/02/ed26/579fc9a46964e.jpg" class="lessonimg" alt="LeMaker Guitar 官方 LeMuntu 系统体验">
+                                                    <div class="lessonplay">
+                                                        <i class="playericon"></i>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="lesson-infor">
+                                                <h2 class="lesson-info-h2"><a href="#" >LeMaker Guitar 官方 LeMuntu 系统体验</a></h2>
+                                                <p>
+                                                    本课程主要介绍 LeMaker Guitar 官方的 Linux 操作系统 LeMuntu 该如何使用，以及如何配置主要的接口，为后期更深入的 Linux 系统开发和学习奠定基础。
+                                                </p>
+                                                <div class="timeandicon">
+                                                    <div class="cf">
+                                                        <dl>
+                                                            <dd class="mar-b8"><i class="time-icon"></i><em>4课时
+							9分钟</em>
+                                                            </dd>
+                                                            <dd class="zhongji">
+                                                                <i class="xinhao-icon"></i><em>初级</em>
+                                                            </dd>
+                                                        </dl>
+                                                        <em class="learn-number">2891人学习</em>
+                                                    </div>
+                                                    <div class="cf">
+                                                        <div class="lessonicon-box">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="lessonimg-box">
+                                                <i class="lesson-shoucang"></i>
+                                                <a href="http://www.jikexueyuan.com/course/2899.html">
+                                                    <img src="http://a1.jikexueyuan.com/home/201608/02/ed26/579fc9a46964e.jpg" class="lessonimg" alt="LeMaker Guitar 官方 LeMuntu 系统体验">
+                                                    <div class="lessonplay">
+                                                        <i class="playericon"></i>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="lesson-infor">
+                                                <h2 class="lesson-info-h2"><a href="#" >LeMaker Guitar 官方 LeMuntu 系统体验</a></h2>
+                                                <p>
+                                                    本课程主要介绍 LeMaker Guitar 官方的 Linux 操作系统 LeMuntu 该如何使用，以及如何配置主要的接口，为后期更深入的 Linux 系统开发和学习奠定基础。
+                                                </p>
+                                                <div class="timeandicon">
+                                                    <div class="cf">
+                                                        <dl>
+                                                            <dd class="mar-b8"><i class="time-icon"></i><em>4课时
+							9分钟</em>
+                                                            </dd>
+                                                            <dd class="zhongji">
+                                                                <i class="xinhao-icon"></i><em>初级</em>
+                                                            </dd>
+                                                        </dl>
+                                                        <em class="learn-number">2891人学习</em>
+                                                    </div>
+                                                    <div class="cf">
+                                                        <div class="lessonicon-box">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="lessonimg-box">
+                                                <i class="lesson-shoucang"></i>
+                                                <a href="http://www.jikexueyuan.com/course/2899.html">
+                                                    <img src="http://a1.jikexueyuan.com/home/201608/02/ed26/579fc9a46964e.jpg" class="lessonimg" alt="LeMaker Guitar 官方 LeMuntu 系统体验">
+                                                    <div class="lessonplay">
+                                                        <i class="playericon"></i>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="lesson-infor">
+                                                <h2 class="lesson-info-h2"><a href="#" >LeMaker Guitar 官方 LeMuntu 系统体验</a></h2>
+                                                <p>
+                                                    本课程主要介绍 LeMaker Guitar 官方的 Linux 操作系统 LeMuntu 该如何使用，以及如何配置主要的接口，为后期更深入的 Linux 系统开发和学习奠定基础。
+                                                </p>
+                                                <div class="timeandicon">
+                                                    <div class="cf">
+                                                        <dl>
+                                                            <dd class="mar-b8"><i class="time-icon"></i><em>4课时
+							9分钟</em>
+                                                            </dd>
+                                                            <dd class="zhongji">
+                                                                <i class="xinhao-icon"></i><em>初级</em>
+                                                            </dd>
+                                                        </dl>
+                                                        <em class="learn-number">2891人学习</em>
+                                                    </div>
+                                                    <div class="cf">
+                                                        <div class="lessonicon-box">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="lessonimg-box">
+                                                <i class="lesson-shoucang"></i>
+                                                <a href="http://www.jikexueyuan.com/course/2899.html">
+                                                    <img src="http://a1.jikexueyuan.com/home/201608/02/ed26/579fc9a46964e.jpg" class="lessonimg" alt="LeMaker Guitar 官方 LeMuntu 系统体验">
+                                                    <div class="lessonplay">
+                                                        <i class="playericon"></i>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="lesson-infor">
+                                                <h2 class="lesson-info-h2"><a href="#" >LeMaker Guitar 官方 LeMuntu 系统体验</a></h2>
+                                                <p>
+                                                    本课程主要介绍 LeMaker Guitar 官方的 Linux 操作系统 LeMuntu 该如何使用，以及如何配置主要的接口，为后期更深入的 Linux 系统开发和学习奠定基础。
+                                                </p>
+                                                <div class="timeandicon">
+                                                    <div class="cf">
+                                                        <dl>
+                                                            <dd class="mar-b8"><i class="time-icon"></i><em>4课时
+							9分钟</em>
+                                                            </dd>
+                                                            <dd class="zhongji">
+                                                                <i class="xinhao-icon"></i><em>初级</em>
+                                                            </dd>
+                                                        </dl>
+                                                        <em class="learn-number">2891人学习</em>
+                                                    </div>
+                                                    <div class="cf">
+                                                        <div class="lessonicon-box">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- lesson-listend -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Examples</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <script src="js/index.js"></script>
+</head>
+
+<body>
+    找到数组["a","x","b","d","m","a","k","m","p","j","a","m"]出现最多的字母并给出个数和每一个所在的顺序。<br/>
+
+    <script>
+        var arr =["a","x","b","d","m","a","k","m","p","j","a","m"];
+        //保存字母出现的次数
+        var count={};
+        //保存字母出现的索引值
+        var pos={};
+        // 遍历数组填充上两个对象
+        for (var i = 0; i <arr.length; i++) {
+            
+            var char=arr[i];
+            //如果对象count中存在字母char
+            if(count[char]){
+                count[char]+=1;
+                pos[char]+=","+i;
+            }else{
+                count[char]=1;
+                pos[char]=i;
+            }
+        }
+        console.log(count);
+        console.log(pos);
+
+        //通过排序获得出现最多的次数
+        var max=count[Object.keys(count).sort(function(a,b){
+            return count[a]<=count[b]
+        })[0]];
+        //用于保存出现次数最多的字母
+        var arr_save=[];
+        //遍历count对象保存出现次数最多的字母
+        for(i in count){
+            if(count[i]>=max){
+                max=count[i];
+                arr_save.push(i);
+            }
+        }
+        for(var i=0;i<arr_save.length;i++){
+            key=arr_save[i];
+            document.write(key+"出现的次数为："+count[key]+"<br/>");
+            document.write(key+"出现的位置为："+pos[key]+"<br/>")
+
+        }
+    </script>
+</body>
+
+</html>

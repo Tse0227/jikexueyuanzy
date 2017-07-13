@@ -1,0 +1,262 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <title>简易计算器</title>
+    <style type="text/css">
+    .style1 {
+        border: 2px solid #C0C0C0;
+        background-color: #C0C0C0;
+    }
+    
+    .style2 {
+        border: 3px solid #C0C0C0;
+    }
+    
+    .style3 {
+        border-left: 2px solid #C0C0C0;
+        border-right: 2px solid #808080;
+        border-top: 2px solid #C0C0C0;
+        border-bottom: 2px solid #808080;
+        background-color: #C0C0C0;
+    }
+    
+    .style4 {
+        font-family: 华文新魏;
+        font-size: xx-large;
+        font-weight: bold;
+        background-color: #FFFFFF;
+        width: 80px;
+        height: 50px;
+    }
+    
+    #TextArea1 {
+        height: 63px;
+        width: 349px;
+    }
+    
+    #txtResult {
+        height: 61px;
+        width: 344px;
+    }
+    
+    #Text1 {
+        height: 47px;
+        width: 343px;
+    }
+    </style>
+</head>
+<script language="javascript">
+//计算中要用到的变量
+var formulaToShow = ""; //要显示的计算式
+var formulaToCalcu = ""; //要计算的计算式
+var result = " "; //计算结果
+var saved = "0"; //存储的数
+
+
+//生成计算式的函数
+function TypeFormula(com) {
+    //如果是已经求过值，则清屏并重新开始计算
+    if ((result != " " || result == "0") && com != "save") {
+        formulaToShow = "";
+        result = " ";
+    }
+
+    //得到按钮信息
+    switch (com) {
+        case "clear": //清空
+            formulaToShow = "";
+            result = " ";
+            break;
+        case "back": //退格（这个写的有些冗余）
+            {
+                var f = formulaToShow;
+                if (f.substring(f.length - 5, f.length) == "asin(" || f.substring(f.length - 5, f.length) == "acos(" || f.substring(f.length - 5, f.length) == "atan(" || f.substring(f.length - 5, f.length) == "sqrt(")
+                    formulaToShow = formulaToShow.substring(0, formulaToShow.length - 5);
+                else if (f.substring(f.length - 4, f.length) == "sin(" || f.substring(f.length - 4, f.length) == "cos(" || f.substring(f.length - 4, f.length) == "tan(" || f.substring(f.length - 4, f.length) == "exp(")
+                    formulaToShow = formulaToShow.substring(0, formulaToShow.length - 4);
+                else if (f.substring(f.length - 3, f.length) == "ln(")
+                    formulaToShow = formulaToShow.substring(0, formulaToShow.length - 3);
+                else
+                    formulaToShow = formulaToShow.substring(0, formulaToShow.length - 1);
+            }
+            break;
+
+        case "sign":
+            {
+                if (formulaToShow == "") formulaToShow = "-";
+                else if (formulaToShow[0] == "-") formulaToShow = formulaToShow.substring(1, formulaToShow.length);
+                else formulaToShow = "-" + formulaToShow;
+            }
+            break;
+        case "save":
+            saved = formulaToShow;
+            break;
+        case "getsave":
+            formulaToShow = formulaToShow + saved;
+            break;
+        case "result": //计算结果
+            {
+                if (formulaToShow == "") result = " ";
+                else {
+                    formulaToCalcu = formulaToShow.toString();
+                    formulaToCalcu = formulaToCalcu.replace(/sin/g, "Math.sin");
+                    formulaToCalcu = formulaToCalcu.replace(/cos/g, "Math.cos");
+                    formulaToCalcu = formulaToCalcu.replace(/tan/g, "Math.tan");
+                    formulaToCalcu = formulaToCalcu.replace(/asin/g, "Math.asin");
+                    formulaToCalcu = formulaToCalcu.replace(/aMath.sin/g, "Math.asin");
+                    formulaToCalcu = formulaToCalcu.replace(/acos/g, "Math.acos");
+                    formulaToCalcu = formulaToCalcu.replace(/aMath.cos/g, "Math.acos");
+                    formulaToCalcu = formulaToCalcu.replace(/atan/g, "Math.atan");
+                    formulaToCalcu = formulaToCalcu.replace(/aMath.tan/g, "Math.atan");
+                    formulaToCalcu = formulaToCalcu.replace(/exp/g, "Math.exp");
+                    formulaToCalcu = formulaToCalcu.replace(/ln/g, "Math.log");
+                    formulaToCalcu = formulaToCalcu.replace(/sqrt/g, "Math.sqrt");
+
+                    try {
+                        result = eval(formulaToCalcu);
+                    } catch (exception) {
+                        window.alert(exception);
+                    }
+                }
+            }
+            break;
+        default:
+            formulaToShow += com;
+            break;
+    }
+
+    txtShow.innerHTML = formulaToShow + "<br/>" + result + "<br/>";
+}
+</script>
+
+<body>
+    <form id="calculator" action="" method="post">
+        <table align="center" class="style2" style="width: 24%">
+            <tr>
+                <td class="style3" style="height: 27px; font-family: 华文新魏; font-size: medium; font-weight: bold; background-color: #FFFFFF;" colspan="7">
+                    <div id="txtShow" style="font-family: 华文新魏; font-size: xx-large; font-weight: bold; text-align: right">
+                        <br/>
+                        <br/>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="style3" style="width: 20px">
+                    <input name="btnResult" class="style4" type="button" value="=" id="btnResult" onclick="TypeFormula('result')" />
+                </td>
+                <td class="style1" style="width: 75px">
+                    <input name="btnLeft" class="style4" type="button" value="(" id="btnLeft" onclick="TypeFormula('(')" />
+                </td>
+                <td class="style1" style="width: 75px">
+                    <input name="btnRight" class="style4" type="button" value=")" id="btnRight" onclick="TypeFormula(')')" />
+                </td>
+                <td class="style1" style="width: 55px">
+                    <input name="btnBack" class="style4" type="button" value="退格" id="btnBack" onclick="TypeFormula('back')" />
+                </td>
+                <td class="style1" style="width: 55px">
+                    <input name="btnClear" class="style4" type="button" value="清屏" id="btnClear" onclick="TypeFormula('clear')" />
+                </td>
+                <td class="style1" style="width: 55px">
+                    <input name="btnSave" class="style4" type="button" value="存储" id="btnSave" onclick="TypeFormula('save')" />
+                </td>
+                <td class="style1" style="width: 55px">
+                    <input name="btnGetSave" class="style4" type="button" value="取存" id="btnGetSave" onclick="TypeFormula('getsave')" />
+                </td>
+            </tr>
+            <tr>
+                <td class="style1" style="width: 20px">
+                    <input name="btnNo7" class="style4" type="button" value="7" id="btnNo7" onclick="TypeFormula('7')" />
+                </td>
+                <td class="style1" style="width: 75px">
+                    <input name="btnNo8" class="style4" type="button" value="8" id="btnNo8" onclick="TypeFormula('8')" />
+                </td>
+                <td class="style1" style="width: 75px">
+                    <input name="btnNo9" class="style4" type="button" value="9" id="btnNo9" onclick="TypeFormula('9')" />
+                </td>
+                <td class="style1" style="width: 55px">
+                    <input name="btnAdd" class="style4" type="button" value="+" id="btnAdd" onclick="TypeFormula('+')" />
+                </td>
+                <td class="style1" style="width: 55px">
+                    <input name="btnMod" class="style4" type="button" value="%" id="btnMod" onclick="TypeFormula('%')" />
+                </td>
+                <td class="style1" style="width: 55px">
+                    &nbsp;</td>
+                <td class="style1" style="width: 55px">
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td class="style1" style="width: 20px">
+                    <input name="btnNo4" class="style4" type="button" value="4" id="btnNo4" onclick="TypeFormula('4')" />
+                </td>
+                <td class="style1" style="width: 75px">
+                    <input name="btnNo5" class="style4" type="button" value="5" id="btnNo5" onclick="TypeFormula('5')" />
+                </td>
+                <td class="style1" style="width: 75px">
+                    <input name="btnNo6" class="style4" type="button" value="6" id="btnNo6" onclick="TypeFormula('6')" />
+                </td>
+                <td class="style1" style="width: 55px">
+                    <input name="btnSub" class="style4" type="button" value="-" id="btnSub" onclick="TypeFormula('-')" />
+                </td>
+                <td class="style1" style="width: 55px">
+                    <input name="btnSqrt" class="style4" type="button" value="sqrt" id="btnSqrt" onclick="TypeFormula('sqrt(')" />
+                </td>
+                <td class="style1" style="width: 55px">
+                    <input name="btnLn" class="style4" type="button" value="ln" id="btnLn" onclick="TypeFormula('ln(')" />
+                </td>
+                <td class="style1" style="width: 55px">
+                    <input name="btnExp" class="style4" type="button" value="exp" id="btnExp" onclick="TypeFormula('exp(')" />
+                </td>
+            </tr>
+            <tr>
+                <td class="style1" style="width: 20px">
+                    <input name="btnNo1" class="style4" type="button" value="1" id="btnNo1" onclick="TypeFormula('1')" />
+                </td>
+                <td class="style1" style="width: 75px">
+                    <input name="btnNo2" class="style4" type="button" value="2" id="btnNo2" onclick="TypeFormula('2')" />
+                </td>
+                <td class="style1" style="width: 75px">
+                    <input name="btnNo3" class="style4" type="button" value="3" id="btnNo3" onclick="TypeFormula('3')" />
+                </td>
+                <td class="style1" style="width: 55px">
+                    <input name="btnMul" class="style4" type="button" value="*" id="btnMul" onclick="TypeFormula('*')" />
+                </td>
+                <td class="style1" style="width: 55px">
+                    <input name="btnSin" class="style4" type="button" value="sin" id="btnSin" onclick="TypeFormula('sin(')" />
+                </td>
+                <td class="style1" style="width: 55px">
+                    <input name="btnCos" class="style4" type="button" value="cos" id="btnCos" onclick="TypeFormula('cos(')" />
+                </td>
+                <td class="style1" style="width: 55px">
+                    <input name="btnTan" class="style4" type="button" value="tan" id="btnTan" onclick="TypeFormula('tan(')" />
+                </td>
+            </tr>
+            <tr>
+                <td class="style1" style="width: 20px">
+                    <input name="btnNo0" class="style4" type="button" value="0" id="btnNo0" onclick="TypeFormula(0)" />
+                </td>
+                <td class="style1" style="width: 75px">
+                    <input name="btnPoint" class="style4" type="button" value="." id="btnPoint" onclick="TypeFormula('.')" />
+                </td>
+                <td class="style1" style="width: 75px">
+                    <input name="btnPoint" class="style4" type="button" value="+/-" id="btnSign" onclick="TypeFormula('sign')" />
+                </td>
+                <td class="style1" style="width: 55px">
+                    <input name="btnDiv" class="style4" type="button" value="/" id="btnDiv" onclick="TypeFormula('/')" />
+                </td>
+                <td class="style1" style="width: 55px">
+                    <input name="btnAsin" class="style4" type="button" value="asin" id="btnAsin" onclick="TypeFormula('asin(')" />
+                </td>
+                <td class="style1" style="width: 55px">
+                    <input name="btnacos" class="style4" type="button" value="acos" id="btnacos" onclick="TypeFormula('acos(')" />
+                </td>
+                <td class="style1" style="width: 55px">
+                    <input name="btnAtan" class="style4" type="button" value="atan" id="btnAtan" onclick="TypeFormula('atan(')" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
